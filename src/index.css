@@ -1,13 +1,294 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  background-color: rgb(0, 0, 0);
 }
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.app {
+  background-color: black;
+}
+
+.calculator {
+  background-color: rgb(248, 195, 103);
+  width: 400px;
+  height: auto;
+}
+
+.pruebas-navbar {
+  font-family: tahoma;
+  overflow: hidden;
+}
+
+.pruebas-navbar-mainNavbar {
+  width: 150px;
+  height: 150px;
+  line-height: 150px;
+  border-radius: 50%;
+  background-color: rgb(216, 101, 0);
+  margin: 90px auto;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  font-size: 2.75rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  transition: 0.24s 0.2s;
+}
+
+.pruebas-navbar-mainNavbar-h2 {
+  text-align: center;
+  padding-top: 35%;
+}
+
+.pruebas-navbar-mainNavbar .pruebas-navbar-mainNavbar-menu {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: -75px;
+  left: -75px;
+  border: 150px solid transparent;
+  cursor: default;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform 1.4s 0.07s;
+  z-index: -1;
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu {
+  transition: transform 0.4s 0.08s, z-index 0 0.5s ease-in-out;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.pruebas-navbar-mainNavbar:not(:hover) .pruebas-navbar-mainNavbar-menu {
+  transition: transform 1.4s 1.07s;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.pruebas-navbar-mainNavbar:not(:hover) .pruebas-navbar-mainNavbar-menu li {
+  transition: transform 0.2s 0.2s;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li {
+  transition: all 0.7s;
+}
+
+.pruebas-navbar-mainNavbar .pruebas-navbar-mainNavbar-menu li a {
+  width: 45px;
+  height: 45px;
+  margin: 40px;
+  line-height: 45px;
+  border-radius: 50%;
+  background-color: rgb(216, 101, 0);
+  position: absolute;
+  font-size: 59%;
+  color: rgb(0, 0, 0);
+  transition: 1.3s;
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(1) {
+  transform: rotate(85deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(1) .nav-a {
+  transform: rotate(275deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(2) {
+  transform: rotate(125deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(2) .nav-a {
+  transform: rotate(595deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(3) {
+  transform: rotate(165deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(3) .nav-a {
+  transform: rotate(555deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(4) {
+  transform: rotate(205deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(4) .nav-a {
+  transform: rotate(515deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(5) {
+  transform: rotate(245deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(5) .nav-a {
+  transform: rotate(475deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(6) {
+  transform: rotate(400deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(6) .nav-a {
+  transform: rotate(315deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(7) {
+  transform: rotate(325deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(7) .nav-a {
+  transform: rotate(395deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(8) {
+  transform: rotate(285deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(8) .nav-a {
+  transform: rotate(430deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(9) {
+  transform: rotate(360deg);
+}
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(9) .nav-a {
+  transform: rotate(355deg);
+}
+
+.cornerNavbar {
+  position: fixed;
+  transition: 0.3s ease-in-out;
+  color: rgb(0, 0, 0);
+  z-index: 50;
+}
+
+.cornerNavbar-navbar-mainNavbar {
+  line-height: 10px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  font-size: 2.75rem;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  transition: 0.24s 0.2s;
+}
+
+.cornerNavbar-navbar-mainNavbar:hover {
+  background-color: rgb(216, 101, 0);
+  color: rgb(0, 0, 0);
+}
+
+.cornerNavbar-navbar-mainNavbar-h2 {
+  text-align: center;
+  padding-top: 35%;
+}
+
+.cornerNavbar-navbar-mainNavbar .cornerNavbar-navbar-mainNavbar-menu {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: -75px;
+  left: -75px;
+  border: 50px solid transparent;
+  cursor: default;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all transform 1.4s 0.07s ease-in-out;
+  z-index: -1;
+}
+
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu {
+  transition: transform 0.4s 0.08s, z-index 0 0.5s ease-in-out;
+  transform: scale(1);
+  z-index: 1;
+  border: 80px solid transparent;
+  transition: 0.5s ease-in;
+}
+
+.cornerNavbar-navbar-mainNavbar:not(:hover) .cornerNavbar-navbar-mainNavbar-menu {
+  transition: transform 1.4s 1.07s;
+  transform: scale(1);
+  z-index: 1;
+  transition: 0.5s ease-in;
+}
+
+.cornerNavbar-navbar-mainNavbar:not(:hover) .cornerNavbar-navbar-mainNavbar-menu li {
+  transition: transform 0.2s 0.2s;
+  transform: scale(1);
+  z-index: 1;
+}
+
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li {
+  transition: all 0.7s;
+}
+
+.cornerNavbar-navbar-mainNavbar .cornerNavbar-navbar-mainNavbar-menu li a {
+  width: 45px;
+  height: 45px;
+  margin: 40px;
+  line-height: 45px;
+  border-radius: 50%;
+  background-color: rgb(216, 101, 0);
+  position: absolute;
+  font-size: calc(16px + 0.5vw);
+  color: rgb(0, 0, 0);
+  transition: 1.7s;
+}
+
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li a {
+  background-color: rgb(216, 101, 0);
+  color: rgb(0, 0, 0);
+}
+
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(1) {
+  transform: rotate(390deg);
+}
+
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(1) .nav-a {
+  transform: rotate(315deg);
+}
+
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(2) {
+  transform: rotate(325deg);
+}
+
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(2) .nav-a {
+  transform: rotate(395deg);
+}
+
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(3) {
+  transform: rotate(358deg);
+}
+
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(3) .nav-a {
+  transform: rotate(355deg);
+}
+
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(4) .nav-a {
+  margin-left: -100px;
+  margin-top: -100px;
+  width: 200px;
+  height: 200px;
+  z-index: -31;
+  font-size: 16px;
+  transition: 0.5s;
+  background-color: transparent;
+  color: transparent;
+}/*# sourceMappingURL=index.css.map */

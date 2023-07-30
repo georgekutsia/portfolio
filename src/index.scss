@@ -1,0 +1,7 @@
+@import "./styles/reset";
+@import "./styles/var";
+@import "./styles/mixin";
+
+@import "./styles/scssParts/caltulator-body";
+@import "../src/components/navbars/circular-navbar/navbar-circular";
+@import "../src/components/navbars/main-navbar/corner-navbar";

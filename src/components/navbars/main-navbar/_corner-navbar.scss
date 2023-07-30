@@ -1,0 +1,115 @@
+.cornerNavbar{
+  position: fixed;
+  transition: 0.3s ease-in-out;
+  color: $my-black;
+  z-index: 50;
+
+}
+.cornerNavbar-navbar-mainNavbar {
+  line-height: 10px;
+  position: relative;
+  cursor: pointer;
+  text-align: center;
+  font-size: 2.75rem;
+  font-weight: bold;
+  color: $my-black;
+  transition: 0.24s 0.2s;
+}
+.cornerNavbar-navbar-mainNavbar:hover {
+  background-color: $my-orange;
+  color: $my-black;
+}
+.cornerNavbar-navbar-mainNavbar-h2{
+  text-align: center;
+  padding-top: 35%;
+}
+.cornerNavbar-navbar-mainNavbar .cornerNavbar-navbar-mainNavbar-menu {
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: -75px;
+  left: -75px;
+  border: 50px solid transparent;
+  cursor: default;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: all transform 1.4s 0.07s ease-in-out;
+  z-index: -1;
+}
+
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu{
+  transition: transform 0.4s 0.08s, z-index 0 0.5s ease-in-out;
+  transform: scale(1);
+  z-index: 1;
+  border: 80px solid transparent;
+  transition: 0.5s ease-in;
+  
+
+}
+.cornerNavbar-navbar-mainNavbar:not(:hover) .cornerNavbar-navbar-mainNavbar-menu {
+  transition: transform 1.4s 1.07s;
+  transform: scale(1);
+  z-index: 1;
+  transition: 0.5s ease-in;
+  
+
+}
+.cornerNavbar-navbar-mainNavbar:not(:hover) .cornerNavbar-navbar-mainNavbar-menu li{
+  transition: transform 0.2s 0.2s;
+  transform: scale(1);
+  z-index: 1;
+  
+}
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li{
+  transition: all 0.7s;
+}
+.cornerNavbar-navbar-mainNavbar .cornerNavbar-navbar-mainNavbar-menu li a{
+  width: 45px;
+  height: 45px;
+  margin: 40px;
+  line-height: 45px;
+  border-radius: 50%;
+  background-color: $my-orange;
+  position: absolute;
+  font-size: calc(16px + 0.5vw);
+  color: $my-black;
+  transition: 1.7s;
+  
+}
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li a{
+  background-color: $my-orange;
+  color: $my-black;
+}
+
+
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(1) {
+  transform: rotate(390deg);
+}
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(1) .nav-a {
+  transform: rotate(315deg);
+}
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(2) {
+  transform: rotate(325deg);
+}
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(2) .nav-a{
+  transform: rotate(395deg);
+}
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(3) {
+  transform: rotate(358deg);
+}
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(3) .nav-a{
+  transform: rotate(355deg);
+}
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(4) {
+}
+.cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li:nth-child(4) .nav-a{
+  margin-left: -100px;
+  margin-top: -100px;
+  width: 200px;
+  height: 200px;
+  z-index: -31;
+  font-size: calc(16px );
+  transition: 0.5s;
+  background-color: transparent;
+  color: transparent;
+}
