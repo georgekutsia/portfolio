@@ -126,7 +126,6 @@
   transform: rotate(155deg);
 }
 .orb {
-    animation:spin 4s linear infinite;
     border-radius: 50%;
     box-shadow:
         inset 20px 0 60px $my-orange,
@@ -137,7 +136,6 @@
           10px 0 30px $blue;
 }
 .small-orb {
-    animation:spin 4s linear infinite;
     border-radius: 50%;
     box-shadow:
         inset 20px 0 60px $my-orange,

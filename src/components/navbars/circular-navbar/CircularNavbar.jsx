@@ -6,7 +6,7 @@ function CircularNavbar({ text, handleCalculator, item1, item2, item3, item4, it
 
   return (
     <div className="pruebas-navbar">
-      <div data-aos="zoom-in" className="pruebas-navbar-mainNavbar">
+      <div data-aos="zoom-in" className="pruebas-navbar-mainNavbar orb">
         <h2 className="pruebas-navbar-mainNavbar-h2">{text}</h2>
         <ul className="pruebas-navbar-mainNavbar-menu">
           <CircularNavbarLi backColor={backColor} onClick={handleCalculator} fa={`fa-solid fa-${item1}`}/>
