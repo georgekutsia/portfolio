@@ -9,7 +9,7 @@ function CornerNavbar({text}) {
         <ul className="cornerNavbar-navbar-mainNavbar-menu">
           <CircularNavbarLi to={"/games"} fa={"fa-solid fa-gamepad"} />
           <CircularNavbarLi to={"#"} fa={"fa-solid fa-palette"} />
-          <CircularNavbarLi to={"#"} fa={"fa-solid fa-user"} />
+          <CircularNavbarLi to={"/myself"} fa={"fa-solid fa-user"} />
           <CircularNavbarLi to={"#"} fa={"fa-solid fa-bars"} />
         </ul>
       </div>

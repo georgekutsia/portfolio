@@ -1,4 +1,6 @@
-@mixin calculator-buttons($backgroundColor) {
+@mixin calculator-buttons($backgroundColor, $width, $height) {
 background-color: $backgroundColor;
+width: $width;
+height: $height;
 }
 

@@ -1,5 +1,5 @@
 @import "./var";
- 
+
 *{
   margin: 0;
   padding: 0;
@@ -15,4 +15,30 @@ a{
 }
 .app{
   background-color: black;
+}
+
+// El puntero del ratón
+.circle{
+  position: absolute;
+  transform: translate(-50%, -50%);
+  background: #ef8205;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  animation: animate 0.5s linear forwards;
+}
+@keyframes animate{
+  0%{
+    width: 0px;
+    height: 0px;
+    opacity: 1;
+  }
+  70%{
+    opacity:1;
+  }
+  100%{
+    width: 150px;
+    height: 150px;
+    opacity:0;
+  }
 }

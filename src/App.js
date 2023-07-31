@@ -1,13 +1,14 @@
 import { Route, Routes } from "react-router-dom";
-import { CalculatorBody, CircularNavbar, CornerNavbar } from "./components";
+import {CornerNavbar } from "./components";
+import { GameScreens, Myself } from "./screens";
 
 function App() {
   return (
     <div className="app">
     <CornerNavbar/>
       <Routes>
-        <Route path="/games" element={<CircularNavbar text={"juegos"} />} />
-        <Route path="/calculator" element={<CalculatorBody />} />
+        <Route path="/games" element={<GameScreens />} />
+        <Route path="/myself" element={<Myself />} />
       </Routes>
     </div>
   );

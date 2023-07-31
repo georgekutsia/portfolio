@@ -1,0 +1,42 @@
+.calculator{
+width: 400px;
+height: auto;
+&-screen-and-result{
+  display: flex;
+  justify-content: space-between;
+}
+&-screen{
+  box-shadow: 0px -1px grey;
+  color: white;
+  font-size: 20px;
+}
+&-mainSection{
+display: flex;
+justify-content: space-evenly;
+}
+ &-body{
+  display: flex;
+  justify-content: space-evenly;
+  &-row{
+    @include calculator-buttons(rgb(110, 208, 253), 100%, 50px );
+    &:hover{
+      background-color: rgb(79, 156, 192);
+    }
+  }
+  &-rowMath{
+    @include calculator-buttons(rgb(96, 96, 255), 50px, 40px );
+    &:hover{
+      background-color:rgb(60, 60, 161) ;
+    }
+  }
+  &-rowMathComa{
+    @include calculator-buttons(rgb(96, 96, 255), 50px, 50px );
+        &:hover{
+      background-color:rgb(60, 60, 161) ;
+    }
+  }
+  .btn-0{
+    width: 300px;
+  }
+ }
+}
