@@ -70,9 +70,11 @@
 }
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(1) {
   transform: rotate(85deg);
+  
 }
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(1) .nav-a {
   transform: rotate(275deg);
+  
 }
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(2) {
   transform: rotate(125deg);
@@ -118,7 +120,32 @@
 }
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(9) {
   transform: rotate(360deg);
+  
 }
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(9) .nav-a {
   transform: rotate(155deg);
 }
+.orb {
+    animation:spin 4s linear infinite;
+    border-radius: 50%;
+    box-shadow:
+        inset 20px 0 60px $my-orange,
+        inset -20px 0 60px $blue,
+        inset 20px 0 300px $my-orange,
+        inset -20px 0 300px $blue,
+          -10px 0 30px $my-orange,
+          10px 0 30px $blue;
+}
+.small-orb {
+    animation:spin 4s linear infinite;
+    border-radius: 50%;
+    box-shadow:
+        inset 20px 0 60px $my-orange,
+        inset -20px 0 60px $blue,
+        inset 20px 0 300px $my-orange,
+        inset -20px 0 300px $blue,
+          0px 0 5px $my-orange,
+          0px 0 5px $blue;
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }

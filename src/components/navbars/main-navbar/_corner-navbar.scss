@@ -74,7 +74,6 @@
   font-size: calc(16px + 0.5vw);
   color: $my-black;
   transition: 1.7s;
-  
 }
 .cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li a{
   background-color: $my-orange;
@@ -112,4 +111,6 @@
   transition: 0.5s;
   background-color: transparent;
   color: transparent;
+  opacity: 0;
+
 }

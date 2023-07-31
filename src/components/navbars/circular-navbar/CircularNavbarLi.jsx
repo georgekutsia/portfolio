@@ -14,7 +14,7 @@ function MainNavbarLi({to, fa, onClick,backColor}) {
   return (
     <li onClick={onClick} className="navbar-li">
       <NavLink data-aos="zoom-in"  onMouseEnter={handleMenuMouseEnter} onMouseLeave={handleMenuMouseLeave} 
-      style={{ scale: `${hover}`, transition:"0.3s", backgroundColor:`${backColor}`}} className="nav-a" to={to} href="#"><i className={`${fa}`}></i>
+      style={{ scale: `${hover}`, transition:"0.3s", backgroundColor:`${backColor}`}} className="nav-a small-orb" to={to} href="#"><i className={`${fa}`}></i>
       </NavLink> 
     </li>
   );

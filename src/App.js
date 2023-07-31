@@ -1,8 +1,9 @@
 import { Route, Routes } from "react-router-dom";
 import {CornerNavbar } from "./components";
 import { GameScreens, Myself } from "./screens";
-
+// import "./canvas.js"
 function App() {
+
   return (
     <div className="app">
     <CornerNavbar/>

@@ -1,10 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Lora&display=swap");
 * {
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-color: rgb(0, 0, 0);
 }
 
 li {
@@ -15,8 +12,8 @@ a {
   text-decoration: none;
 }
 
-.app {
-  background-color: black;
+body {
+  background-color: rgb(0, 0, 0);
 }
 
 .circle {
@@ -44,6 +41,16 @@ a {
     opacity: 0;
   }
 }
+body {
+  display: grid;
+  height: 100vh;
+}
+
+canvas {
+  position: fixed;
+  z-index: -1;
+}
+
 .calculator {
   width: 400px;
   height: auto;
@@ -241,6 +248,23 @@ a {
   transform: rotate(155deg);
 }
 
+.orb {
+  animation: spin 4s linear infinite;
+  border-radius: 50%;
+  box-shadow: inset 20px 0 60px rgb(216, 101, 0), inset -20px 0 60px rgb(56, 41, 3), inset 20px 0 300px rgb(216, 101, 0), inset -20px 0 300px rgb(56, 41, 3), -10px 0 30px rgb(216, 101, 0), 10px 0 30px rgb(56, 41, 3);
+}
+
+.small-orb {
+  animation: spin 4s linear infinite;
+  border-radius: 50%;
+  box-shadow: inset 20px 0 60px rgb(216, 101, 0), inset -20px 0 60px rgb(56, 41, 3), inset 20px 0 300px rgb(216, 101, 0), inset -20px 0 300px rgb(56, 41, 3), 0px 0 5px rgb(216, 101, 0), 0px 0 5px rgb(56, 41, 3);
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .cornerNavbar {
   position: fixed;
   transition: 0.3s ease-in-out;
@@ -360,6 +384,7 @@ a {
   transition: 0.5s;
   background-color: transparent;
   color: transparent;
+  opacity: 0;
 }
 
 .calculatorScreen {
@@ -372,4 +397,5 @@ a {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  background-color: transparent;
 }/*# sourceMappingURL=index.css.map */

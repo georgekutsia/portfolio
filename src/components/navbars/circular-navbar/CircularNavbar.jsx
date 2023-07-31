@@ -1,14 +1,19 @@
 import React from 'react'
 import CircularNavbarLi from './CircularNavbarLi'
-
 function CircularNavbar({ text, handleCalculator, item1, item2, item3, item4, item5, item6, item7, item8, item9, backColor }) {
+  // examples
+  // https://threejs.org/examples/?q=particle#webgl_points_billboards
 
   return (
     <div className="pruebas-navbar">
-      <div  data-aos="zoom-in" className="pruebas-navbar-mainNavbar">
+      <div data-aos="zoom-in" className="pruebas-navbar-mainNavbar orb">
         <h2 className="pruebas-navbar-mainNavbar-h2">{text}</h2>
         <ul className="pruebas-navbar-mainNavbar-menu">
-          <CircularNavbarLi backColor={backColor} onClick={handleCalculator} fa={`fa-solid fa-${item1}`}/>
+          <CircularNavbarLi
+            backColor={backColor}
+            onClick={handleCalculator}
+            fa={`fa-solid fa-${item1}`}
+          />
           <CircularNavbarLi backColor={backColor} fa={`fa-solid fa-${item2}`} />
           <CircularNavbarLi backColor={backColor} fa={`fa-solid fa-${item3}`} />
           <CircularNavbarLi backColor={backColor} fa={`fa-solid fa-${item4}`} />
