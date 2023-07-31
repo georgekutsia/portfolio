@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lora&display=swap");
 * {
   margin: 0;
@@ -19,11 +20,11 @@ body {
 .circle {
   position: absolute;
   transform: translate(-50%, -50%);
-  background: #ef8205;
-  width: 100px;
-  height: 100px;
+  background: random-rgb();
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
-  animation: animate 0.5s linear forwards;
+  animation: animate 0.5s ease-in-out forwards;
 }
 
 @keyframes animate {
@@ -32,12 +33,32 @@ body {
     height: 0px;
     opacity: 1;
   }
+  40% {
+    opacity: 1;
+    transform: translateX(-110px);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(30px) translateX(-100px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(50px) translateX(0px);
+    width: 30px;
+    height: 30px;
+  }
   70% {
     opacity: 1;
+    transform: translateY(30px) translateX(100px);
   }
-  100% {
-    width: 150px;
-    height: 150px;
+  80% {
+    opacity: 0.5;
+    transform: translateX(110px);
+  }
+  80% {
+    opacity: 0;
+    width: 5px;
+    height: 5px;
     opacity: 0;
   }
 }
@@ -49,6 +70,17 @@ body {
 canvas {
   position: fixed;
   z-index: -1;
+}
+
+.trail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: rgba(255, 0, 0, 0.5); /* Color del rastro (rojo semi-transparente) */
+  border-radius: 50%;
+  pointer-events: none; /* Evita que el rastro afecte a la interacción con otros elementos */
 }
 
 .calculator {
@@ -258,11 +290,21 @@ canvas {
   box-shadow: inset 20px 0 60px rgb(216, 101, 0), inset -20px 0 60px rgb(56, 41, 3), inset 20px 0 300px rgb(216, 101, 0), inset -20px 0 300px rgb(56, 41, 3), 0px 0 5px rgb(216, 101, 0), 0px 0 5px rgb(56, 41, 3);
 }
 
-@keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
+.circularNav-a:hover {
+  scale: 1.2;
+  background-color: rgb(255, 201, 73);
+  transition: 0.1s ease-in-out;
 }
+
+.libreria1 {
+  background-color: rgb(129, 129, 247);
+  width: 100%;
+  padding: 10px;
+  margin: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
 .cornerNavbar {
   position: fixed;
   transition: 0.3s ease-in-out;
@@ -383,6 +425,16 @@ canvas {
   background-color: transparent;
   color: transparent;
   opacity: 0;
+}
+
+.gallery1 {
+  display: flex;
+  justify-content: space-around;
+  gap: 50px;
+  flex-wrap: wrap;
+  color: white;
+  align-items: center;
+  text-align: center;
 }
 
 .calculatorScreen {

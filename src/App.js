@@ -1,12 +1,13 @@
 import { Route, Routes } from "react-router-dom";
 import {CornerNavbar } from "./components";
 import { GameScreens, Myself } from "./screens";
-// import "./canvas.js"
+
 function App() {
 
+
   return (
-    <div className="app">
-    <CornerNavbar/>
+    <div className="app trail">
+      <CornerNavbar />
       <Routes>
         <Route path="/games" element={<GameScreens />} />
         <Route path="/myself" element={<Myself />} />

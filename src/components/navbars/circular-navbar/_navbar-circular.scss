@@ -145,5 +145,8 @@
           0px 0 5px $my-orange,
           0px 0 5px $blue;
 }
-
-@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.circularNav-a:hover{
+  scale: 1.2;
+  background-color: rgb(255, 201, 73);
+  transition: 0.1s ease-in-out;
+}

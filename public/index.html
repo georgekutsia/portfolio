@@ -37,16 +37,28 @@
     <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <script type="text/javascript">
       let pulse = function () {
+        const colorRandom = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`
         let e = document.createElement("div");
         e.setAttribute("class", "circle"),
+        e.style.backgroundColor= colorRandom
           document.body.appendChild(e),
           (e.style.top = event.pageY + "px"),
           (e.style.left = event.pageX + "px"),
           setTimeout(function () {
             document.body.removeChild(e);
-          }, 1000);
+          }, 400);
       };
       document.addEventListener("click", pulse);
+      const trail = document.querySelector('.trail');
+
+// Función para actualizar la posición del rastro según la posición del puntero
+function updateTrail(event) {
+  trail.style.left = `${event.pageX}px`;
+  trail.style.top = `${event.pageY}px`;
+}
+
+// Escucha el evento 'mousemove' en el documento para actualizar continuamente el rastro
+document.addEventListener('mousemove', updateTrail);
     </script>
     <script>
       AOS.init();

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import Form1 from '../../forms/form1/Form1';
-import StateList from '../../componentes-abel/StateList';
+import Gallery1 from '../../gallery/gallery1/Gallery1';
 
 function CalculatorBody() {
   const [value, setValue] = useState('');
@@ -76,7 +75,6 @@ function CalculatorBody() {
             </div>
           </section>
         </section>
-        <Form1/>
     </div>
   );
 }
