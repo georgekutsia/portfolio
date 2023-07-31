@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
-import { CalculatorBody, CircularNavbar, Gallery1, Cart1 } from "../../components";
+import { CalculatorBody, CircularNavbar, Gallery1, Cart1, Colores, ColoresNombrados } from "../../components";
 import Libreria1 from '../../components/librerias/Libreria1';
 function GameScreens() {
 const [calculator, setCalculator] = useState(false)
 const [gallery1, setGallery1] = useState(false)
 const [libreria1, setLibreria1] = useState(false)
-
+const [colores, setColores] = useState(false)
+const [coloresNombrados, setColoresNombrados] = useState(true)
   const products = [
     {
       name: "Remmant 2",
@@ -36,6 +37,12 @@ const handleBulala = ()=>{
 }
 const handleLibreria1 = ()=>{
   setLibreria1(!libreria1)
+}
+const handleColores = ()=>{
+  setColores(!colores)
+}
+const handleColoresNombrados = ()=>{
+  setColoresNombrados(!coloresNombrados)
 }
 
   return (
@@ -86,6 +93,24 @@ const handleLibreria1 = ()=>{
           item9={"toolbox"}
           backColor={"rgb(216, 101, 0)"}
         />
+        <CircularNavbar
+          text={"Oscar"}
+          handleGallery1={handleGallery1}
+          handleCalculator={handleCalculator}
+          handleLibreria1={handleLibreria1}
+          handle8={handleColores}
+          handle7={handleColoresNombrados}
+          item1={"calculator"}
+          item2={"palette"}
+          item3={"calendar"}
+          item4={"bomb"}
+          item5={"ghost"}
+          item6={"gears"}
+          item7={"globe"}
+          item8={"rainbow"}
+          item9={"face-grin-beam"}
+          backColor={"rgb(216, 101, 0)"}
+        />
       </div>
       <div>
         {calculator && (
@@ -106,6 +131,20 @@ const handleLibreria1 = ()=>{
         {libreria1 && (
           <div className="calculatorScreen">
             <Libreria1 />
+          </div>
+        )}
+      </div>
+      <div>
+        {colores && (
+          <div className="">
+            <Colores />
+          </div>
+        )}
+      </div>
+      <div>
+        {coloresNombrados && (
+          <div className="">
+            <ColoresNombrados />
           </div>
         )}
       </div>

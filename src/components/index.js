@@ -5,3 +5,5 @@ export { default as CircularNavbarLi } from "./navbars/circular-navbar/CircularN
 export { default as Gallery1 } from "./gallery/gallery1/Gallery1";
 export { default as Cart1 } from "./cart1/Cart1";
 export { default as Librería1 } from "./librerias/Libreria1";
+export { default as Colores } from "./juegosDeOscarYOliver/colores/Colores";
+export { default as ColoresNombrados } from "./juegosDeOscarYOliver/colores/ColoresNombrados";

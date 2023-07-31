@@ -13,10 +13,6 @@ a {
   text-decoration: none;
 }
 
-body {
-  background-color: rgb(0, 0, 0);
-}
-
 .circle {
   position: absolute;
   transform: translate(-50%, -50%);
@@ -24,7 +20,7 @@ body {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  animation: animate 0.5s ease-in-out forwards;
+  animation: animate 0.9s ease-in-out forwards;
 }
 
 @keyframes animate {
@@ -65,6 +61,7 @@ body {
 body {
   display: grid;
   height: 100vh;
+  background-color: rgb(0, 0, 0);
 }
 
 canvas {
@@ -448,4 +445,114 @@ canvas {
   justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: transparent;
+}
+
+.colores-box {
+  justify-content: space-evenly;
+  text-align: center;
+}
+.colores-box-circles {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.colores-box-circles-white {
+  width: calc(100px + 4vw);
+  margin: auto;
+}
+.colores-box-circles-circle {
+  width: calc(100px + 4vw);
+  height: calc(100px + 4vw);
+  border-radius: 50%;
+  color: white;
+}
+
+.colorNames {
+  color: white;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+.colorNames-example img {
+  width: 200px;
+}
+.colorNames-circles {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 400px;
+  margin: 150px auto;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(1) {
+  transform: translateY(100px);
+  animation: slideUpAndDisappear 2.3s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(2) {
+  transform: translateY(90px);
+  animation: slideUpAndDisappear 1.3s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(3) {
+  transform: translateY(230px);
+  animation: slideUpAndDisappear 1.7s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(4) {
+  transform: translateY(-30px);
+  animation: slideUpAndDisappear 1.8s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(5) {
+  transform: translateY(160px);
+  animation: slideUpAndDisappear 1.9s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(6) {
+  transform: translateY(10px);
+  animation: slideUpAndDisappear 2s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(7) {
+  transform: translateY(-350px);
+  animation: slideUpAndDisappear 2.3s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(8) {
+  transform: translateY(-210px);
+  animation: slideUpAndDisappear 2.7s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(9) {
+  transform: translateY(-10px);
+  animation: slideUpAndDisappear 2.9s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(10) {
+  transform: translateY(40px);
+  animation: slideUpAndDisappear 1.3s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(11) {
+  transform: translateY(-190px);
+  animation: slideUpAndDisappear 2.4s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(12) {
+  transform: translateY(0px);
+  animation: slideUpAndDisappear 3.3s linear forwards;
+}
+.colorNames-circles-white {
+  width: calc(100px + 4vw);
+  margin: auto;
+}
+.colorNames-circles-circle {
+  width: calc(50px + 1vw);
+  height: calc(100px + 1vw);
+  border-radius: 50%;
+}
+
+@keyframes slideUpAndDisappear {
+  0% {
+    opacity: 0;
+  }
+  80% {
+    transform: translateX(-50%) translateY(-650px);
+    opacity: 1;
+  }
+  90% {
+    transform: translateX(-50%) translateY(-650px);
+    opacity: 0;
+  }
 }/*# sourceMappingURL=index.css.map */
