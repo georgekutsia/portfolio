@@ -1,10 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
+import Form1 from '../../forms/form1/Form1';
+import StateList from '../../componentes-abel/StateList';
 
 function CalculatorBody() {
   const [value, setValue] = useState('');
   const [operation, setOperation] = useState(null);
   const [result, setResult] = useState('');
   const [next, setNext] = useState(false)
+
+  
   const handleNumber = (number) => {
     if(next && value !== ""){
       setValue("")
@@ -12,14 +16,12 @@ function CalculatorBody() {
     }
     setValue((prevValue) => prevValue + number);
   };
-
   const handleOperation = (operat) => {
     setOperation(operat);
     setResult(value);
     setValue('');
     setNext(true);
   };
-
   const handleCalculate = () => {
     if (operation === '+') {
       setValue(String(Number(result) + Number(value)));
@@ -35,32 +37,6 @@ function CalculatorBody() {
     setOperation(null);
     setNext(true)
   };
-
-
-//     useEffect(() => {
-//       document.addEventListener("keydown", handleKeyPress);
-//       return () => {
-//         document.removeEventListener("keydown", handleKeyPress);
-//       };
-//     }, []);
-// const handleKeyPress = (event) => {
-//   const keyPressed = event.key;
-
-//   if (!isNaN(keyPressed) || ["+", "-", "*", "/", "="].includes(keyPressed)) {
-//     event.preventDefault(); 
-
-//     if (!isNaN(keyPressed)) {
-//       handleNumber(keyPressed);
-//     } else if (keyPressed === "=") {
-//       handleCalculate();
-//     } else {
-//       handleOperation(keyPressed);
-//     }
-//   }
-// };
-
-
-
 
   return (
     <div className="calculator">
@@ -100,6 +76,7 @@ function CalculatorBody() {
             </div>
           </section>
         </section>
+        <Form1/>
     </div>
   );
 }

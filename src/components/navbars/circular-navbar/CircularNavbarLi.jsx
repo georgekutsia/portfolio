@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
 
-function MainNavbarLi({to, fa, onClick,backColor}) {
+function CircularNavbarLi({to, fa, onClick, backColor}) {
   const [hover, setHover] = useState("1")
+
   const handleMenuMouseEnter = () => {
     setHover("1.2");
   };
@@ -20,4 +21,4 @@ function MainNavbarLi({to, fa, onClick,backColor}) {
   );
 }
 
-export default MainNavbarLi
+export default CircularNavbarLi
