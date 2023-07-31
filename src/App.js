@@ -6,7 +6,7 @@ function App() {
 
 
   return (
-    <div className="app trail">
+    <div className="app ">
       <CornerNavbar />
       <Routes>
         <Route path="/games" element={<GameScreens />} />

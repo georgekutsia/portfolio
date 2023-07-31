@@ -49,16 +49,7 @@
           }, 400);
       };
       document.addEventListener("click", pulse);
-      const trail = document.querySelector('.trail');
-
-// Función para actualizar la posición del rastro según la posición del puntero
-function updateTrail(event) {
-  trail.style.left = `${event.pageX}px`;
-  trail.style.top = `${event.pageY}px`;
-}
-
-// Escucha el evento 'mousemove' en el documento para actualizar continuamente el rastro
-document.addEventListener('mousemove', updateTrail);
+      
     </script>
     <script>
       AOS.init();
