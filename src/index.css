@@ -482,7 +482,7 @@ canvas {
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
-  width: 400px;
+  width: 500px;
   margin: 150px auto;
 }
 .colorNames-circles .colorNames-circles-circle:nth-child(1) {
@@ -532,6 +532,18 @@ canvas {
 .colorNames-circles .colorNames-circles-circle:nth-child(12) {
   transform: translateY(0px);
   animation: slideUpAndDisappear 3.3s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(13) {
+  transform: translateY(0px);
+  animation: slideUpAndDisappear 1.4s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(14) {
+  transform: translateY(0px);
+  animation: slideUpAndDisappear 2.9s linear forwards;
+}
+.colorNames-circles .colorNames-circles-circle:nth-child(15) {
+  transform: translateY(0px);
+  animation: slideUpAndDisappear 1.4s linear forwards;
 }
 .colorNames-circles-white {
   width: calc(100px + 4vw);

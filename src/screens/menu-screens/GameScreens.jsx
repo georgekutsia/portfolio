@@ -50,7 +50,6 @@ const handleColoresNombrados = ()=>{
       <div className="game-screen-box">
         <CircularNavbar
           text={"juegos"}
-          handleCalculator={handleCalculator}
           item1={"calculator"}
           item2={"palette"}
           item3={"bomb"}
@@ -64,7 +63,6 @@ const handleColoresNombrados = ()=>{
         />
         <CircularNavbar
           text={"páginas"}
-          handleCalculator={handleBulala}
           href1={"https://guide-dongions.netlify.app/"}
           item1={"dice-d20"}
           item2={"palette"}
@@ -95,9 +93,6 @@ const handleColoresNombrados = ()=>{
         />
         <CircularNavbar
           text={"Oscar"}
-          handleGallery1={handleGallery1}
-          handleCalculator={handleCalculator}
-          handleLibreria1={handleLibreria1}
           handle8={handleColores}
           handle7={handleColoresNombrados}
           item1={"calculator"}
