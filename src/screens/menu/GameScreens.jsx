@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { CalculatorBody, CircularNavbar, Gallery1, Cart1, Colores, ColoresNombrados } from "../../components";
 import Libreria1 from '../../components/librerias/Libreria1';
+
 function GameScreens() {
 const [calculator, setCalculator] = useState(false)
 const [gallery1, setGallery1] = useState(false)
@@ -33,8 +34,7 @@ const handleCalculator = ()=>{
 const handleGallery1 = ()=>{
   setGallery1(!gallery1)
 }
-const handleBulala = ()=>{
-}
+
 const handleLibreria1 = ()=>{
   setLibreria1(!libreria1)
 }

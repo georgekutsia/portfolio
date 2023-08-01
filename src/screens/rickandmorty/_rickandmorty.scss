@@ -1,0 +1,49 @@
+.rickandmorty-box{
+  background-color: rgb(60, 255, 245);
+  background-image: url("https://res.cloudinary.com/dxnzcewsy/image/upload/v1690880230/rick-morty-1100x618_copia_s4flkn.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 0px 5px 0px;
+  width: 90%;
+  margin: -30px auto;
+  border-radius: 40px;
+  font-size: calc(14px + 0.5vw);
+  &-navlink{
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    text-shadow: 1px 1px red;
+    padding: 0px 10px;
+    &:hover{
+    border-left: 2px solid rgb(0, 8, 255);
+    border-right: 2px solid rgb(0, 8, 255);
+    }
+  }
+}
+
+.rickandmorty-center{
+  color: white;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+.rickandmorty-center-gallery{
+  color: white;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.rickandmorty-pagination{
+  display: flex;
+  gap: 40px;
+  font-size: 20px;
+  button{
+    padding: 0px 20px;
+  }
+}

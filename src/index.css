@@ -424,6 +424,11 @@ canvas {
   opacity: 0;
 }
 
+.active {
+  color: red;
+  scale: 1.2;
+}
+
 .gallery1 {
   display: flex;
   justify-content: space-around;
@@ -432,19 +437,6 @@ canvas {
   color: white;
   align-items: center;
   text-align: center;
-}
-
-.calculatorScreen {
-  display: flex;
-  justify-content: center;
-  margin-top: 150px;
-}
-
-.game-screen-box {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  background-color: transparent;
 }
 
 .colores-box {
@@ -567,4 +559,67 @@ canvas {
     transform: translateX(-50%) translateY(-650px);
     opacity: 0;
   }
+}
+.calculatorScreen {
+  display: flex;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.game-screen-box {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  background-color: transparent;
+}
+
+.rickandmorty-box {
+  background-color: rgb(60, 255, 245);
+  background-image: url("https://res.cloudinary.com/dxnzcewsy/image/upload/v1690880230/rick-morty-1100x618_copia_s4flkn.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: space-evenly;
+  padding: 40px 0px 5px 0px;
+  width: 90%;
+  margin: -30px auto;
+  border-radius: 40px;
+  font-size: calc(14px + 0.5vw);
+}
+.rickandmorty-box-navlink {
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  text-shadow: 1px 1px red;
+  padding: 0px 10px;
+}
+.rickandmorty-box-navlink:hover {
+  border-left: 2px solid rgb(0, 8, 255);
+  border-right: 2px solid rgb(0, 8, 255);
+}
+
+.rickandmorty-center {
+  color: white;
+  margin: auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.rickandmorty-center-gallery {
+  color: white;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 50px;
+  text-align: center;
+}
+
+.rickandmorty-pagination {
+  display: flex;
+  gap: 40px;
+  font-size: 20px;
+}
+.rickandmorty-pagination button {
+  padding: 0px 20px;
 }/*# sourceMappingURL=index.css.map */

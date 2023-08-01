@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function CircularNavbarLi({to, fa, handle, backColor, href}) {
   const [hover, setHover] = useState("1")
@@ -14,11 +14,12 @@ function CircularNavbarLi({to, fa, handle, backColor, href}) {
 
   return (
     <li onClick={handle} className="navbar-li">
+    <a href={href}>aa</a>
     
-      <Link data-aos="zoom-in"  onMouseEnter={handleMenuMouseEnter} onMouseLeave={handleMenuMouseLeave} 
-      style={{ scale: `${hover}`, transition:"0.3s", backgroundColor:`${backColor}`, color: handle? "white":"" }} className={`nav-a small-orb ${fa}`} to={to} href={"https://fontawesome.com/search?q=box&o=r&m=free"}><i> 
+      <NavLink  data-aos="zoom-in"  onMouseEnter={handleMenuMouseEnter} onMouseLeave={handleMenuMouseLeave} 
+      style={{ scale: `${hover}`, transition:"0.3s", backgroundColor:`${backColor}`, color: handle? "white":"" }}  className={`nav-a small-orb ${fa}`} to={to} href={"https://fontawesome.com/search?q=box&o=r&m=free"}><i>
       </i>
-      </Link> 
+      </NavLink> 
     </li>
   );
 }
