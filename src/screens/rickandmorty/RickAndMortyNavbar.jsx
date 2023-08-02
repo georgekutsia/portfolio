@@ -4,14 +4,6 @@ import { NavLink } from 'react-router-dom';
 
 function RickAndMortyNavbar() {
 
-    // useEffect(()=>{
-    //   async function getCharacters(){
-    //   const {data} = await axios("https://rickandmortyapi.com/api/character");
-    //   console.log(data)
-    //   }
-    //   getCharacters()
-    // },[])
-
   return (
     <div className="rickandmorty-box">
       <NavLink className={({ isActive, isPending }) => 

@@ -629,14 +629,42 @@ canvas {
   padding: 0px 20px;
 }
 
+.rickandmorty-btns {
+  text-align: center;
+  margin-top: 100px;
+}
+.rickandmorty-btns button {
+  width: 100px;
+  background-color: rgb(134, 134, 248);
+}
+
 .rickandmorty-contactPage {
-  max-width: 400px;
+  max-width: 500px;
   background-color: rgba(115, 255, 0, 0.193);
   color: white;
-  margin: 200px auto;
+  margin: 20px auto;
   padding: 10px;
   border-radius: 10px;
 }
+.rickandmorty-contactPage-btnEpisode {
+  background-color: rgb(208, 0, 255);
+  padding: 3px 10px;
+  border: none;
+  width: 110px;
+}
+.rickandmorty-contactPage-episodes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 .rickandmorty-contactPage-img {
-  width: 100px;
+  width: 110px;
+}
+.rickandmorty-contactPage-info {
+  display: flex;
+}
+.rickandmorty-contactPage-info-texts {
+  padding: 5px;
+}
+.rickandmorty-contactPage-info-texts-span {
+  color: yellow;
 }/*# sourceMappingURL=index.css.map */

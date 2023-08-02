@@ -101,7 +101,6 @@ const [baloons, setBaloons] = useState(randomBaloon);
           </button>
         </div>
         {correct &&
-        
         <div className="colorNames-circles">
                 <audio autoPlay>
         <source src="./trumpets-party.mp3" type="audio/mp3" />

@@ -3,6 +3,7 @@ import {CornerNavbar, MainFooter } from "./components";
 import { CharactersPage, ContactPage, GameScreens, HomePage, MainRickAndMortyPage, Myself, RickAndMortyNavbar } from "./screens";
 
 function App() {
+  
   return (
     <div className="app ">
       <RickAndMortyNavbar />
@@ -16,6 +17,7 @@ function App() {
       </Routes>
       <MainFooter />
     </div>
+    
   );
 }
 
