@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import Gallery1 from '../../gallery/gallery1/Gallery1';
 
 function CalculatorBody() {
   const [value, setValue] = useState('');

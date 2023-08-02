@@ -5,6 +5,9 @@ import Pagination from "./componentesRickAndMorty/Pagination";
 
 function CharactersPage() {
   const [characters, setCharacters] = useState([]);
+
+
+
   async function getCharacters(page) {
     try {
       const { data } = await axios.get(
@@ -22,10 +25,10 @@ function CharactersPage() {
   return (
     <>
       <div className="rickandmorty-center-gallery">
-        <Pagination changePage={getCharacters} />
+        <Pagination changePage={getCharacters}/>
       </div>
       <div>
-        <RickAndMortyGaleria data={characters}/>
+        <RickAndMortyGaleria data={characters} />
       </div>
     </>
   );

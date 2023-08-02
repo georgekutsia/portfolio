@@ -91,7 +91,7 @@ const [baloons, setBaloons] = useState(randomBaloon);
     <div>
       <div className="colorNames">
         <div className="colorNames-example">
-          <h1 onClick={handleRandom}>{colorNamed.name} </h1>
+          <h1 onClick={handleRandom}> <span className="big-first-letter">{colorNamed.name.charAt(0)}</span> {colorNamed.name.substring(1)}</h1>
           <img src={colorNamed.img} alt={colorNamed.name} />
         </div>
         <div>
@@ -101,10 +101,15 @@ const [baloons, setBaloons] = useState(randomBaloon);
           </button>
         </div>
         {correct &&
+        
         <div className="colorNames-circles">
+                <audio autoPlay>
+        <source src="./trumpets-party.mp3" type="audio/mp3" />
+      </audio>
           {baloons.map((baloon, index) => (
             <img className="colorNames-circles-circle" src={baloon} alt={baloon} key={index} />
           ))}
+
         </div>
         }
       </div>

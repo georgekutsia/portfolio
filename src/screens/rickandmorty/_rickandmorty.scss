@@ -47,3 +47,14 @@
     padding: 0px 20px;
   }
 }
+.rickandmorty-contactPage{
+  max-width: 400px;
+  background-color: rgba(115, 255, 0, 0.193);
+  color: white;
+  margin: 200px auto;
+  padding: 10px;
+  border-radius: 10px;
+  &-img{
+    width: 100px;
+  }
+}

@@ -15,7 +15,8 @@
       width: calc(100px + 4vw);
       height: calc(100px + 4vw);
       border-radius: 50%;
-      color: white;
+      color: #F7207EFF;
+      color: #F7207EFF;
     }
   }
 }
@@ -122,3 +123,6 @@
     transform: translateX(-50%) translateY(-650px);
     opacity: 0;
   }}
+  .big-first-letter{
+    font-size: 130px;
+  }

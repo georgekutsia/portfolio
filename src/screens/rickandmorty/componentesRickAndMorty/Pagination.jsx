@@ -1,20 +1,29 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-function Pagination({ changePage }) {
+function Pagination({ changePage, limit }) {
   const [activePage, setActivePage] = useState(1);
 
-const handleChangePage = (newPage)=>{
-  setActivePage(newPage);
-  changePage(newPage)
+  const handleChangePage = (newPage) => {
+    setActivePage(newPage);
+    changePage(newPage);
+    console.log(activePage);
+  };
 
-}
   return (
     <div className="rickandmorty-pagination">
-      <button onClick={()=>handleChangePage(activePage + 1)}> <i class="fa-solid fa-chevron-left"></i></button>
+      {activePage > 1 && (
+        <button onClick={() => handleChangePage(activePage - 1)}>
+          <i className="fa-solid fa-chevron-left"></i>
+        </button>
+      )}
       <span>{activePage}</span>
-      <button onClick={()=>handleChangePage(activePage - 1)}> <i class="fa-solid fa-chevron-right"></i></button>
+      {activePage < 42 && (
+        <button onClick={() => handleChangePage(activePage + 1)}>
+          <i className="fa-solid fa-chevron-right"></i>
+        </button>
+      )}
     </div>
   );
 }
 
-export default Pagination
+export default Pagination;

@@ -12,7 +12,7 @@ function App() {
         <Route path="/myself" element={<Myself />} />
         <Route path="/rickandmorty/home-page" element={<HomePage />} />
         <Route path="/rickandmorty/characters-page" element={<CharactersPage />} />
-        <Route path="/rickandmorty/contact-page" element={<ContactPage/>} />
+        <Route path="/rickandmorty/characters-page/:id" element={<ContactPage />} />
       </Routes>
       <MainFooter />
     </div>

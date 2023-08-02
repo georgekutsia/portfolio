@@ -457,7 +457,8 @@ canvas {
   width: calc(100px + 4vw);
   height: calc(100px + 4vw);
   border-radius: 50%;
-  color: white;
+  color: #f7207e;
+  color: #f7207e;
 }
 
 .colorNames {
@@ -560,6 +561,10 @@ canvas {
     opacity: 0;
   }
 }
+.big-first-letter {
+  font-size: 130px;
+}
+
 .calculatorScreen {
   display: flex;
   justify-content: center;
@@ -622,4 +627,16 @@ canvas {
 }
 .rickandmorty-pagination button {
   padding: 0px 20px;
+}
+
+.rickandmorty-contactPage {
+  max-width: 400px;
+  background-color: rgba(115, 255, 0, 0.193);
+  color: white;
+  margin: 200px auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+.rickandmorty-contactPage-img {
+  width: 100px;
 }/*# sourceMappingURL=index.css.map */
