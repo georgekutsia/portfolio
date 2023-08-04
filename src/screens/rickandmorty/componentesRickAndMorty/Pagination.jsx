@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function Pagination({ changePage, limit }) {
+function Pagination({ changePage, limit, cambiar }) {
   const [activePage, setActivePage] = useState(1);
 
   const handleChangePage = (newPage) => {
@@ -22,6 +22,7 @@ function Pagination({ changePage, limit }) {
           <i className="fa-solid fa-chevron-right"></i>
         </button>
       )}
+      <input type="text" name="numero" value={limit} onChange={cambiar} />
     </div>
   );
 }

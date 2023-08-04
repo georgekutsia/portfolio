@@ -34,9 +34,14 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 40px;
   margin-top: 50px;
   text-align: center;
+  h3{
+    font-size: 20px;
+  }
+  img{
+    width: 140px;
+  }
 }
 
 .rickandmorty-pagination{
@@ -84,4 +89,7 @@
       }
     }
   }
+}
+.rickandmortyHomepage{
+  color: white;
 }

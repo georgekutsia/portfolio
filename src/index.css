@@ -302,8 +302,74 @@ canvas {
   text-align: center;
 }
 
+.note1 {
+  display: flex;
+  justify-content: space-around;
+  color: white;
+}
+.note1-list {
+  background-color: grey;
+  border-radius: 10px;
+  padding: 10px;
+}
+.note1-list-btn {
+  background-color: greenyellow;
+  width: 50px;
+}
+.note1-btn {
+  background-color: blue;
+}
+
+.allNavbars-ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  overflow: hidden;
+  padding: 20px;
+}
+.allNavbars-ul li button {
+  border: none;
+  background-color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background-color: rgb(216, 101, 0);
+}
+.allNavbars li {
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: fadeInAndSlide 0.8s forwards;
+}
+.allNavbars li:nth-child(1) {
+  animation-delay: 0s;
+}
+.allNavbars li:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.allNavbars li:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.allNavbars li:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.allNavbars li:nth-child(5) {
+  animation-delay: 0.8s;
+}
+.allNavbars li:nth-child(6) {
+  animation-delay: 1s;
+}
+.allNavbars li:nth-child(7) {
+  animation-delay: 1.2s;
+}
+
+@keyframes fadeInAndSlide {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
 .cornerNavbar {
   position: fixed;
+  display: absolute;
   transition: 0.3s ease-in-out;
   color: rgb(0, 0, 0);
   z-index: 50;
@@ -458,7 +524,6 @@ canvas {
   height: calc(100px + 4vw);
   border-radius: 50%;
   color: #f7207e;
-  color: #f7207e;
 }
 
 .colorNames {
@@ -565,6 +630,23 @@ canvas {
   font-size: 130px;
 }
 
+.memoryGame {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  width: 400px;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 10px;
+}
+.memoryGame-img {
+  margin: auto;
+}
+
+.profile {
+  color: white;
+}
+
 .calculatorScreen {
   display: flex;
   justify-content: center;
@@ -615,9 +697,14 @@ canvas {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  gap: 40px;
   margin-top: 50px;
   text-align: center;
+}
+.rickandmorty-center-gallery h3 {
+  font-size: 20px;
+}
+.rickandmorty-center-gallery img {
+  width: 140px;
 }
 
 .rickandmorty-pagination {
@@ -667,4 +754,8 @@ canvas {
 }
 .rickandmorty-contactPage-info-texts-span {
   color: yellow;
+}
+
+.rickandmortyHomepage {
+  color: white;
 }/*# sourceMappingURL=index.css.map */

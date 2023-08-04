@@ -1,13 +1,16 @@
 import React, { useState } from 'react'
-import { CalculatorBody, CircularNavbar, Gallery1, Cart1, Colores, ColoresNombrados } from "../../components";
+import { CalculatorBody, CircularNavbar, Gallery1, Cart1, Colores, ColoresNombrados, Memory } from "../../components";
 import Libreria1 from '../../components/librerias/Libreria1';
+import List from '../../components/notes/note1/List';
 
 function GameScreens() {
 const [calculator, setCalculator] = useState(false)
 const [gallery1, setGallery1] = useState(false)
 const [libreria1, setLibreria1] = useState(false)
 const [colores, setColores] = useState(false)
-const [coloresNombrados, setColoresNombrados] = useState(true)
+const [list, setList] = useState(false)
+const [coloresNombrados, setColoresNombrados] = useState(false)
+const [memory, setMemory] = useState(false)
   const products = [
     {
       name: "Remmant 2",
@@ -43,6 +46,12 @@ const handleColores = ()=>{
 }
 const handleColoresNombrados = ()=>{
   setColoresNombrados(!coloresNombrados)
+}
+const handleMemory = ()=>{
+  setMemory(!memory);
+}
+const handleList = ()=>{
+  setList(!list);
 }
 
   return (
@@ -80,6 +89,7 @@ const handleColoresNombrados = ()=>{
           handleGallery1={handleGallery1}
           handleCalculator={handleCalculator}
           handleLibreria1={handleLibreria1}
+          handle4={handleList}
           item1={"calculator"}
           item2={"palette"}
           item3={"calendar"}
@@ -95,6 +105,7 @@ const handleColoresNombrados = ()=>{
           text={"Oscar"}
           handle8={handleColores}
           handle7={handleColoresNombrados}
+          handle6={handleMemory}
           item1={"calculator"}
           item2={"palette"}
           item3={"calendar"}
@@ -140,6 +151,20 @@ const handleColoresNombrados = ()=>{
         {coloresNombrados && (
           <div className="">
             <ColoresNombrados />
+          </div>
+        )}
+      </div>
+      <div>
+        {memory && (
+          <div className="">
+            <Memory />
+          </div>
+        )}
+      </div>
+      <div>
+        {list && (
+          <div className="">
+          <List/>
           </div>
         )}
       </div>

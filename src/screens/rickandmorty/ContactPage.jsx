@@ -7,6 +7,7 @@ function ContactPage() {
   const [characterDetail, setCharacterDetail] = useState([]);
   const [showEpisode, setShowEpisode] = useState(false);
   const [episodeNumbers, setEpisodeNumbers] = useState([]);
+  const [limitPages, setLimitPages] = useState();
   
   const [nextChar, setNextChar] = useState(Number(id))
 
@@ -15,12 +16,16 @@ function ContactPage() {
       const resultado = await axios(
         `https://rickandmortyapi.com/api/character/${nextChar}`
       );
+      const limite = await axios(
+        `https://rickandmortyapi.com/api/character`
+      );
       setCharacterDetail(resultado.data);
       const numbers = resultado.data.episode?.map((epi) => {
         const matches = epi.match(/\/(\d+)$/);
         return matches ? matches[1] : null;
       });
       setEpisodeNumbers(numbers);
+      setLimitPages(limite.data.info.count);
     } catch (error) {
       console.error("Error fetching character details:", error);
     }
@@ -28,16 +33,16 @@ function ContactPage() {
   useEffect(() => {
     getCharacter();
   }, [nextChar]);
-
   const handleId = (fun) => {
     setNextChar(fun);
   };
   return (
     <>
     <div className="rickandmorty-btns">
-      <button disabled={nextChar < 1} onClick={() => handleId(1)}>Beggining</button>
-      <button disabled={nextChar < 1} onClick={() => handleId(nextChar - 1)}>Previous</button>
-      <button onClick={()=>handleId(nextChar + 1)}>Next</button>
+      <button disabled={nextChar <= 1} onClick={() => handleId(1)}>Beggining</button>
+      <button disabled={nextChar <= 1} onClick={() => handleId(nextChar - 1)}>Previous</button>
+      <button disabled={nextChar >= limitPages} onClick={()=>handleId(nextChar + 1)}>Next</button>
+      <button disabled={nextChar >= limitPages} onClick={()=>handleId(limitPages)}>last</button>
     </div>
     <div className="rickandmorty-contactPage">
       <h2>{characterDetail.name}</h2>

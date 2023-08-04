@@ -1,0 +1,17 @@
+.note1{
+  display: flex;
+  justify-content: space-around;
+  color: white;
+  &-list{
+    background-color: grey;
+    border-radius: 10px;
+    padding: 10px;
+    &-btn{
+      background-color: greenyellow;
+      width: 50px;
+    }
+  }
+  &-btn{
+    background-color: blue;
+  }
+}

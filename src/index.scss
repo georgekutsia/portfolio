@@ -5,11 +5,15 @@
 @import "../src/components/calculator/body/caltulator-body";
 @import "../src/components/navbars/circular-navbar/navbar-circular";
 @import "../src/components/librerias/libreria1";
+@import "../src/components/notes/note1/note1.scss";
+@import "../src/components/navbars/all-navbars";
 @import "../src/components/navbars/main-navbar/corner-navbar";
 @import "../src/components/gallery/gallery1/gallery1.scss";
 @import "../src/components/juegosDeOscarYOliver/colores/colores";
+@import "../src/components/juegosDeOscarYOliver/memo/memory-game";
 
-
+@import "../src//components//profileComponent/profile-comp";
+@import "../src/screens/profile/profile";
 
 @import "../src/screens/menu/game-screen";
 @import "../src/screens/rickandmorty/rickandmorty";

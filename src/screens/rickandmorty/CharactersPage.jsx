@@ -2,11 +2,10 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import RickAndMortyGaleria from "./RickAndMortyGaleria";
 import Pagination from "./componentesRickAndMorty/Pagination";
+import RickAndMortySearchForm from "./RickAndMortySearchForm";
 
 function CharactersPage() {
   const [characters, setCharacters] = useState([]);
-
-
 
   async function getCharacters(page) {
     try {
@@ -24,12 +23,10 @@ function CharactersPage() {
   }, []);
   return (
     <>
-      <div className="rickandmorty-center-gallery">
-        <Pagination changePage={getCharacters}/>
+    <RickAndMortySearchForm onSearch={getCharacters}/>
+      <div className="rickandmorty-center-gallery"> <Pagination changePage={getCharacters}/>
       </div>
-      <div>
-        <RickAndMortyGaleria data={characters} />
-      </div>
+      <div><RickAndMortyGaleria data={characters} /></div>
     </>
   );
 }

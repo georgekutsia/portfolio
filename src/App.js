@@ -1,23 +1,23 @@
-import { Route, Routes } from "react-router-dom";
-import {CornerNavbar, MainFooter } from "./components";
-import { CharactersPage, ContactPage, GameScreens, HomePage, MainRickAndMortyPage, Myself, RickAndMortyNavbar } from "./screens";
-
+import Routers from "./Routers";
+import {AllNavbars, CornerNavbar, MainFooter } from "./components";
+import React, { useState } from "react";
+import rickFavoriteData from "./data/rickfavorite.data"
+export const GlobalContext = React.createContext()
 function App() {
-  
+  const [showNavbars, setShowNavbars] = useState(false)
+  const handleNavbars = (state)=>{
+    setShowNavbars(state);
+  }
+  const [favorites, setFavorites] = useState(rickFavoriteData);
   return (
     <div className="app ">
-      <RickAndMortyNavbar />
-      <CornerNavbar />
-      <Routes>
-        <Route path="/games" element={<GameScreens />} />
-        <Route path="/myself" element={<Myself />} />
-        <Route path="/rickandmorty/home-page" element={<HomePage />} />
-        <Route path="/rickandmorty/characters-page" element={<CharactersPage />} />
-        <Route path="/rickandmorty/characters-page/:id" element={<ContactPage />} />
-      </Routes>
-      <MainFooter />
+      <GlobalContext.Provider value={{ favorites, setFavorites }}>
+        <CornerNavbar handle1={handleNavbars} />
+        {showNavbars && <AllNavbars handleNavbars={handleNavbars} />}
+        <Routers />
+        {/* <MainFooter /> */}
+      </GlobalContext.Provider>
     </div>
-    
   );
 }
 
