@@ -1,10 +1,6 @@
 export { default as GameScreens } from "./menu/GameScreens";
 export { default as Profile } from "./profile/ProfileScreen"
 
-
-
-
-
 export { default as CharactersPage } from "./rickandmorty/CharactersPage";
 export { default as RickAndMortyHomePage } from "./rickandmorty/RickAndMortyHomePage";
 export { default as RickAndMortySearchForm} from "./rickandmorty/RickAndMortySearchForm.jsx";

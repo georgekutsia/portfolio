@@ -1,6 +1,6 @@
 import React from 'react'
 import { Route, Routes } from "react-router-dom";
-import { CharactersPage, ContactPage, ContactScreen, GameScreens, Profile, RickAndMortyAllCharacters, RickAndMortyFavorites, RickAndMortyHomePage } from "./screens";
+import { CharactersPage, ContactPage, GameScreens, Profile, RickAndMortyAllCharacters, RickAndMortyFavorites, RickAndMortyHomePage } from "./screens";
 
 function Routers() {
   return (

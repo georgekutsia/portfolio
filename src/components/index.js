@@ -5,7 +5,8 @@ export { default as AllNavbars } from "./navbars/AllNavbars";
 export { default as MainFooter } from "./footers/mainfooter/_main-footer";
 
 
-
+export {default as ListComments} from "./notes/note1/ListComments"
+export {default as List} from "./notes/note1/List"
 export { default as CircularNavbarLi } from "./navbars/circular-navbar/CircularNavbarLi";
 export { default as Gallery1 } from "./gallery/gallery1/Gallery1";
 export { default as Cart1 } from "./cart1/Cart1";

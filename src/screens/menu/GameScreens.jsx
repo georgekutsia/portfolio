@@ -8,7 +8,7 @@ const [calculator, setCalculator] = useState(false)
 const [gallery1, setGallery1] = useState(false)
 const [libreria1, setLibreria1] = useState(false)
 const [colores, setColores] = useState(false)
-const [list, setList] = useState(false)
+const [list, setList] = useState(true)
 const [coloresNombrados, setColoresNombrados] = useState(false)
 const [memory, setMemory] = useState(false)
   const products = [
@@ -85,7 +85,7 @@ const handleList = ()=>{
           backColor={"rgb(216, 101, 0)"}
         />
         <CircularNavbar
-          text={"útiles"}
+          text={"Gio"}
           handleGallery1={handleGallery1}
           handleCalculator={handleCalculator}
           handleLibreria1={handleLibreria1}

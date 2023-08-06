@@ -1,8 +1,10 @@
 import Routers from "./Routers";
 import {AllNavbars, CornerNavbar, MainFooter } from "./components";
 import React, { useState } from "react";
+
 import rickFavoriteData from "./data/rickfavorite.data"
 export const GlobalContext = React.createContext()
+
 function App() {
   const [showNavbars, setShowNavbars] = useState(false)
   const handleNavbars = (state)=>{

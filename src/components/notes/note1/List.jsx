@@ -1,16 +1,21 @@
 import React, { useState } from "react";
+import ListComments from "./ListComments";
 
 const defaultList = [
   { name: "bulala", qty: 3, comments: [] },
   { name: "hey", qty: 12, comments: [] },
-  { name: "mufasa", qty: 35, comments: [] },
+  { name: "mufasa", qty: 35, 
+  comments: [
+    { text:"bulala", user:"red"},
+    { text:"bulala", user:"green"},
+    { text:"bulala", user:"green"},
+] },
 ];
 
 function List() {
   const [list, setList] = useState(defaultList);
-  const [inputValues, setInputValues] = useState(
-    Array(defaultList.length).fill("")
-  );
+  const [editingComments, setEditingComments] = useState();
+
 
   const remove = (index) => {
     const copyList = [...list];
@@ -18,53 +23,44 @@ function List() {
     setList(copyList);
   };
 
-  const addList = () => {
+  const addOrEdit = (index) => {
+    const copyList = [...list]
     const name = prompt("Escribe un nombre");
     const qty = prompt("Escribe una cantidad");
+
     if (name && name !== "" && qty && qty !== "") {
-      setList([...list, { name, qty, comments: [] }]);
-      setInputValues([...inputValues, ""]);
+      copyList[index] = {name, qty, comment:[]}
+      setList(copyList)
     } else {
       alert("Se requiere información");
     }
   };
 
-  const handleInputChange = (event, index) => {
-    const updatedValues = [...inputValues];
-    updatedValues[index] = event.target.value;
-    setInputValues(updatedValues);
-  };
-  const handleAddComment = (index) => {
-    const copyList = [...list];
-    copyList[index].comments = [
-      ...copyList[index].comments,
-      inputValues[index],
-    ];
 
-    
+  const showComments = (index) => {
+    setEditingComments({comments:list[index].comments, index})
+  }
 
-
-    setList(copyList);
-    console.log(copyList);
-  };
-
+  const addComment = (comment, index)=> {
+      const copyList = [...list];
+      copyList[index].comments.push({text:comment, user:"red"})
+      setList(copyList);
+  }
   return (
     <div className="note1">
       {list.map((item, index) => (
         <div key={index} className="note1-list">
-          <button className="note1-list-btn" onClick={() => remove(index)}> X </button>
+          <button className="note1-list-btn" onClick={() => addOrEdit(index)}> edit </button>
+          <button className="note1-list-btn" onClick={() => remove(index)}> Remove </button>
+          <button className="note1-list-btn" onClick={() => showComments(index)}> Comments ({item.comments.length})</button>
           <h2>{item.name}</h2>
           <h2>cantidad: {item.qty}</h2>
-          <input type="text" placeholder="bulala" value={inputValues[index]} onChange={(event) => handleInputChange(event, index)} />
-          <button className="note1-list-btn" onClick={() => handleAddComment(index)}> +</button>
-          {item.comments.map((comment, commentIndex) => (
-            <p key={commentIndex}>{comment}</p>
-          ))}
         </div>
       ))}
-          <button className="note1-btn" onClick={addList}>
-        Agregar
-      </button>
+          {editingComments && <div> <ListComments data={editingComments} onComment={addComment}/>
+          <button onClick={()=>setEditingComments(null)}>Ocultar</button>
+          </div>}
+          <button className="note1-list-btn" onClick={() => addOrEdit(list.length)}> Add new </button>
     </div>
   );
 }
