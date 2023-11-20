@@ -4,7 +4,8 @@ export { default as CircularNavbar } from "./navbars/circular-navbar/CircularNav
 export { default as AllNavbars } from "./navbars/AllNavbars";
 export { default as MainFooter } from "./footers/mainfooter/_main-footer";
 export { default as Buttons } from "./buttons/Buttons";
-export { default as Button } from "./buttons/button/Button";
+export { default as Button1 } from "./buttons/button/Button1";
+export { default as Button2 } from "./buttons/button/Button2";
 
 
 export {default as ListComments} from "./notes/note1/ListComments"
