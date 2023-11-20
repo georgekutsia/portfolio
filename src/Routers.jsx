@@ -13,7 +13,8 @@ function Routers() {
           <Route path="/rickandmorty/favorites" element={<RickAndMortyFavorites />}/>
           <Route path="/rickandmorty/homePage" element={<RickAndMortyHomePage />}/>
           <Route path="/rickandmorty/allChars" element={<RickAndMortyAllCharacters />}/>
-        </Routes></div>
+        </Routes>
+    </div>
   )
 }
 

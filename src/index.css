@@ -205,76 +205,47 @@ canvas {
   transition: 1.3s;
 }
 
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(1) {
-  transform: rotate(85deg);
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li {
+  transform: rotate(40deg);
+  transition: transform 0.5s ease-in-out;
+  transform-origin: 50% 10px; /* Ajusta la distancia entre elementos */
 }
 
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(1) .nav-a {
-  transform: rotate(275deg);
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li .nav-a {
+  transform: rotate(320deg);
+  transition: transform 0.5s ease-in-out;
 }
 
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(2) {
-  transform: rotate(125deg);
-}
-
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(2) .nav-a {
-  transform: rotate(595deg);
+  transform: rotate(80deg);
 }
 
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(3) {
-  transform: rotate(165deg);
-}
-
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(3) .nav-a {
-  transform: rotate(555deg);
+  transform: rotate(120deg);
 }
 
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(4) {
-  transform: rotate(205deg);
-}
-
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(4) .nav-a {
-  transform: rotate(515deg);
+  transform: rotate(160deg);
 }
 
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(5) {
-  transform: rotate(245deg);
-}
-
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(5) .nav-a {
-  transform: rotate(475deg);
+  transform: rotate(200deg);
 }
 
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(6) {
-  transform: rotate(400deg);
-}
-
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(6) .nav-a {
-  transform: rotate(315deg);
+  transform: rotate(240deg);
 }
 
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(7) {
-  transform: rotate(325deg);
-}
-
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(7) .nav-a {
-  transform: rotate(395deg);
+  transform: rotate(280deg);
 }
 
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(8) {
-  transform: rotate(285deg);
-}
-
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(8) .nav-a {
-  transform: rotate(430deg);
+  transform: rotate(320deg);
 }
 
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(9) {
   transform: rotate(360deg);
-}
-
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(9) .nav-a {
-  transform: rotate(155deg);
 }
 
 .orb {

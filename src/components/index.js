@@ -3,6 +3,8 @@ export { default as CornerNavbar } from "./navbars/main-navbar/CornerNavbar";
 export { default as CircularNavbar } from "./navbars/circular-navbar/CircularNavbar";
 export { default as AllNavbars } from "./navbars/AllNavbars";
 export { default as MainFooter } from "./footers/mainfooter/_main-footer";
+export { default as Buttons } from "./buttons/Buttons";
+export { default as Button } from "./buttons/button/Button";
 
 
 export {default as ListComments} from "./notes/note1/ListComments"

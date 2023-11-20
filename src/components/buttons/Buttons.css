@@ -1,0 +1,9 @@
+.buttons-box{
+  margin: 3vw 10vw;
+}
+.buttons-box-div{
+  margin: 3vw 10vw;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}

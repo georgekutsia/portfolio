@@ -68,63 +68,49 @@
   color: $my-black;
   transition: 1.3s;
 }
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(1) {
-  transform: rotate(85deg);
-  
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li {
+  transform: rotate(calc(360deg / 9));
+  transition: transform 0.5s ease-in-out;
+  transform-origin: 50% 10px; /* Ajusta la distancia entre elementos */
 }
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(1) .nav-a {
-  transform: rotate(275deg);
-  
+
+.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li .nav-a {
+  transform: rotate(calc(360deg - 360deg / 9));
+  transition: transform 0.5s ease-in-out;
 }
+
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(2) {
-  transform: rotate(125deg);
+  transform: rotate(calc(2 * 360deg / 9));
 }
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(2) .nav-a {
-  transform: rotate(595deg);
-}
+
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(3) {
-  transform: rotate(165deg);
+  transform: rotate(calc(3 * 360deg / 9));
 }
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(3) .nav-a {
-  transform: rotate(555deg);
-}
+
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(4) {
-  transform: rotate(205deg);
+  transform: rotate(calc(4 * 360deg / 9));
 }
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(4) .nav-a {
-  transform: rotate(515deg);
-}
+
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(5) {
-  transform: rotate(245deg);
+  transform: rotate(calc(5 * 360deg / 9));
 }
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(5) .nav-a {
-  transform: rotate(475deg);
-}
+
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(6) {
-  transform: rotate(400deg);
+  transform: rotate(calc(6 * 360deg / 9));
 }
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(6) .nav-a {
-  transform: rotate(315deg);
-}
+
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(7) {
-  transform: rotate(325deg);
+  transform: rotate(calc(7 * 360deg / 9));
 }
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(7) .nav-a{
-  transform: rotate(395deg);
-}
+
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(8) {
-  transform: rotate(285deg);
+  transform: rotate(calc(8 * 360deg / 9));
 }
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(8) .nav-a{
-  transform: rotate(430deg);
-}
+
 .pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(9) {
-  transform: rotate(360deg);
-  
+  transform: rotate(calc(9 * 360deg / 9));
 }
-.pruebas-navbar-mainNavbar:hover .pruebas-navbar-mainNavbar-menu li:nth-child(9) .nav-a {
-  transform: rotate(155deg);
-}
+
 .orb {
     border-radius: 50%;
     box-shadow:

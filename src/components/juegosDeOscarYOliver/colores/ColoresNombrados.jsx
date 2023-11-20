@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function ColoresNombrados() {
-  const [colorNamed, setColorNamed] = useState({ name: "OSCAR", img: "" });
+  const [colorNamed, setColorNamed] = useState({ name: "OSCAR", img: "https://res.cloudinary.com/dxnzcewsy/image/upload/v1699439479/portfolio/oscaryoliver/familia/WhatsApp_Image_2023-11-08_at_10.22.22_u2e5sd.jpg" });
   const [inputNamed, setInputNamed] = useState("");
   const [correct, setCorrect] = useState(false)
   const randomWords = [
@@ -12,6 +12,22 @@ function ColoresNombrados() {
     {
       name: "MARIO",
       img: "https://res.cloudinary.com/dxnzcewsy/image/upload/v1690844391/portfolio/oscaryoliver/familia/mario_rn0udu.jpg",
+    },
+    {
+      name: "BEBÉ",
+      img: "https://res.cloudinary.com/dxnzcewsy/image/upload/v1699439488/portfolio/oscaryoliver/familia/WhatsApp_Image_2023-11-08_at_10.21.29_ecetuv.jpg",
+    },
+    {
+      name: "BABU",
+      img: "https://res.cloudinary.com/dxnzcewsy/image/upload/v1699439473/portfolio/oscaryoliver/familia/WhatsApp_Image_2023-11-08_at_10.25.52_fxnoy8.jpg",
+    },
+    {
+      name: "NANI",
+      img: "https://res.cloudinary.com/dxnzcewsy/image/upload/v1699439483/portfolio/oscaryoliver/familia/WhatsApp_Image_2023-11-08_at_10.22.05_rpkzoy.jpg",
+    },
+    {
+      name: "OSCAR",
+      img: "https://res.cloudinary.com/dxnzcewsy/image/upload/v1699439479/portfolio/oscaryoliver/familia/WhatsApp_Image_2023-11-08_at_10.22.22_u2e5sd.jpg",
     },
     {
       name: "DANI",

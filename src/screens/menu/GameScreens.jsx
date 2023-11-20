@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { CalculatorBody, CircularNavbar, Gallery1, Cart1, Colores, ColoresNombrados, Memory } from "../../components";
+import { CalculatorBody, CircularNavbar, Gallery1, Cart1, Colores, ColoresNombrados, Memory, Buttons } from "../../components";
 import Libreria1 from '../../components/librerias/Libreria1';
 import List from '../../components/notes/note1/List';
 
@@ -8,7 +8,9 @@ const [calculator, setCalculator] = useState(false)
 const [gallery1, setGallery1] = useState(false)
 const [libreria1, setLibreria1] = useState(false)
 const [colores, setColores] = useState(false)
-const [list, setList] = useState(true)
+const [list, setList] = useState(false)
+const [buttons, setButtons] = useState(true)
+
 const [coloresNombrados, setColoresNombrados] = useState(false)
 const [memory, setMemory] = useState(false)
   const products = [
@@ -37,7 +39,6 @@ const handleCalculator = ()=>{
 const handleGallery1 = ()=>{
   setGallery1(!gallery1)
 }
-
 const handleLibreria1 = ()=>{
   setLibreria1(!libreria1)
 }
@@ -52,6 +53,9 @@ const handleMemory = ()=>{
 }
 const handleList = ()=>{
   setList(!list);
+}
+const handleButtons = ()=>{
+  setButtons(!buttons)
 }
 
   return (
@@ -85,16 +89,17 @@ const handleList = ()=>{
           backColor={"rgb(216, 101, 0)"}
         />
         <CircularNavbar
-          text={"Gio"}
+          text={"Peaces"}
           handleGallery1={handleGallery1}
           handleCalculator={handleCalculator}
           handleLibreria1={handleLibreria1}
-          handle4={handleList}
+          handleList1={handleList}
+          handleButtons1={handleButtons}
           item1={"calculator"}
           item2={"palette"}
           item3={"calendar"}
           item4={"bomb"}
-          item5={"ghost"}
+          item5={"toggle-on"}
           item6={"gears"}
           item7={"globe"}
           item8={"crown"}
@@ -167,6 +172,11 @@ const handleList = ()=>{
           <List/>
           </div>
         )}
+      </div>
+      <div>
+        {buttons && 
+          <Buttons/>
+        }
       </div>
     </>
   );
