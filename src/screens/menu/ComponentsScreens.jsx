@@ -3,7 +3,7 @@ import { CalculatorBody, CircularNavbar, Gallery1, Cart1, Colores, ColoresNombra
 import Libreria1 from '../../components/librerias/Libreria1';
 import List from '../../components/notes/note1/List';
 
-function GameScreens() {
+function ComponentsScreens() {
 const [calculator, setCalculator] = useState(false)
 const [gallery1, setGallery1] = useState(false)
 const [libreria1, setLibreria1] = useState(false)
@@ -73,6 +73,7 @@ const handleButtons = ()=>{
           item8={"crown"}
           item9={"gamepad"}
           backColor={"rgb(216, 101, 0)"}
+          aosDelay={"100"}
         />
         <CircularNavbar
           text={"páginas"}
@@ -87,6 +88,8 @@ const handleButtons = ()=>{
           item8={"crown"}
           item9={"globe"}
           backColor={"rgb(216, 101, 0)"}
+          aosDelay={"200"}
+
         />
         <CircularNavbar
           text={"Peaces"}
@@ -105,6 +108,8 @@ const handleButtons = ()=>{
           item8={"crown"}
           item9={"toolbox"}
           backColor={"rgb(216, 101, 0)"}
+          aosDelay={"300"}
+
         />
         <CircularNavbar
           text={"Oscar"}
@@ -121,12 +126,14 @@ const handleButtons = ()=>{
           item8={"rainbow"}
           item9={"face-grin-beam"}
           backColor={"rgb(216, 101, 0)"}
+          aosDelay={"400"}
+
         />
       </div>
       <div>
         {calculator && (
           <div className="calculatorScreen">
-            <CalculatorBody />
+            <CalculatorBody  closeComponent={handleCalculator}/>
           </div>
         )}
       </div>
@@ -141,45 +148,45 @@ const handleButtons = ()=>{
       <div>
         {libreria1 && (
           <div className="calculatorScreen">
-            <Libreria1 />
+            <Libreria1 closeComponent={setLibreria1}/>
           </div>
         )}
       </div>
       <div>
         {colores && (
           <div className="">
-            <Colores />
+            <Colores closeComponent={handleColores}/>
           </div>
         )}
       </div>
       <div>
         {coloresNombrados && (
           <div className="">
-            <ColoresNombrados />
+            <ColoresNombrados  closeComponent={handleColoresNombrados}/>
           </div>
         )}
       </div>
       <div>
         {memory && (
           <div className="">
-            <Memory />
+            <Memory closeComponent={handleMemory}/>
           </div>
         )}
       </div>
       <div>
         {list && (
           <div className="">
-          <List/>
+          <List closeComponent={handleList}/>
           </div>
         )}
       </div>
       <div>
         {buttons && 
-          <Buttons/>
+          <Buttons closeComponent={handleButtons}/>
         }
       </div>
     </>
   );
 }
 
-export default GameScreens
+export default ComponentsScreens

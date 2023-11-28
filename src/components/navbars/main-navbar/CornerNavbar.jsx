@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { CircularNavbarLi } from '../..';
 
-function CornerNavbar({text, handle1}) {
+function CornerNavbar({text, handleNavbars}) {
   const [nav1, setnav1] = useState(false)
   const [nav2, setnav2] = useState(false)
 
@@ -11,8 +11,8 @@ function CornerNavbar({text, handle1}) {
         <h2 className="cornerNavbar-navbar-mainNavbar-h2">{text}</h2>
         <ul className="cornerNavbar-navbar-mainNavbar-menu">
           <CircularNavbarLi to={"/profile"} fa={"fa-solid fa-user"} />
-          <CircularNavbarLi handle={handle1} to={"/bulala"} setNavbars={true} fa={"fa-solid fa-person-drowning"} />
-          <CircularNavbarLi to={"/games"} fa={"fa-solid fa-gamepad"} />
+          <CircularNavbarLi handle={handleNavbars} to={"/apis"}  fa={"fa-solid fa-person-drowning"} />
+          <CircularNavbarLi to={"/components"} fa={"fa-solid fa-gamepad"} />
           <CircularNavbarLi to={"#"} fa={"fa-solid fa-bars"}/>
         </ul>
       </div>

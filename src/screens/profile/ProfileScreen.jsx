@@ -1,8 +1,12 @@
 import React from 'react'
+import { ProfileComponent } from '../../components'
 
 function ProfileScreen() {
   return (
-    <div className='profile'>ProfileScreen</div>
+    <div className='profile'>
+    
+    <ProfileComponent/>
+    </div>
   )
 }
 

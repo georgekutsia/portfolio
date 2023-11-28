@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ListComments from "./ListComments";
+import CloseAllComponent from "../../close/CloseAllComponent";
 
 const defaultList = [
   { name: "bulala", qty: 3, comments: [] },
@@ -12,7 +13,7 @@ const defaultList = [
 ] },
 ];
 
-function List() {
+function List({closeComponent}) {
   const [list, setList] = useState(defaultList);
   const [editingComments, setEditingComments] = useState();
 
@@ -48,6 +49,8 @@ function List() {
   }
   return (
     <div className="note1">
+<CloseAllComponent setComponent={closeComponent}/>
+
       {list.map((item, index) => (
         <div key={index} className="note1-list">
           <button className="note1-list-btn" onClick={() => addOrEdit(index)}> edit </button>

@@ -1,5 +1,6 @@
-export { default as GameScreens } from "./menu/GameScreens";
+export { default as ComponentsScreens } from "./menu/ComponentsScreens";
 export { default as Profile } from "./profile/ProfileScreen"
+export { default as AllApis } from "./api/allApis"
 
 export { default as CharactersPage } from "./rickandmorty/CharactersPage";
 export { default as RickAndMortyHomePage } from "./rickandmorty/RickAndMortyHomePage";

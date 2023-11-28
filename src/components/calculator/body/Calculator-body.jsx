@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import CloseAllComponent from '../../close/CloseAllComponent';
 
-function CalculatorBody() {
+function CalculatorBody({closeComponent}) {
   const [value, setValue] = useState('');
   const [operation, setOperation] = useState(null);
   const [result, setResult] = useState('');
@@ -38,6 +39,7 @@ function CalculatorBody() {
 
   return (
     <div className="calculator">
+    <CloseAllComponent setComponent={closeComponent}/>
       <div className='calculator-screen-and-result'>
         <div placeholder='0' className="calculator-screen">{value || result}</div>
         <button onClick={handleCalculate} className="calculator-body-rowMath">=</button>

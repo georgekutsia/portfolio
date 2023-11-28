@@ -11,9 +11,17 @@
 @import "../src/components/gallery/gallery1/gallery1.scss";
 @import "../src/components/juegosDeOscarYOliver/colores/colores";
 @import "../src/components/juegosDeOscarYOliver/memo/memory-game";
-
+@import "./components/close/close_all_components";
 @import "../src//components//profileComponent/profile-comp";
 @import "../src/screens/profile/profile";
+@import "../src/components//profileComponent/profile-comp";
+@import "../src/components//profileComponent/myPicture/myPicture";
+@import "../src/components/buttons/buttons";
+@import "../src/components/buttons/button/button1";
+@import "../src/components/buttons/button/button2";
+@import "../src/components/buttons/button/button3";
 
-@import "../src/screens/menu/game-screen";
+@import "../src/screens/menu/allComponents";
 @import "../src/screens/rickandmorty/rickandmorty";
+
+@import "./styles//scssParts/pointer"

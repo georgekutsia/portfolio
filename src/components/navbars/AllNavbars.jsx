@@ -15,7 +15,6 @@ function AllNavbars({handleNavbars}) {
         <li>  <button onClick={"bulala"}>dsad</button></li>
         <li>  <button onClick={"bulala"}>dsad</button></li>
       </ul>
-
       {RMNavbar && <RickAndMortyNavbar/>}
     </div>
   )
