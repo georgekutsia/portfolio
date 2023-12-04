@@ -12,7 +12,6 @@ function MyPicture() {
         }
       });
     }
-
     return () => {
     };
   }, []);
