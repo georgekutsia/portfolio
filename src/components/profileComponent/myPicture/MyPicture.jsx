@@ -19,7 +19,7 @@ function MyPicture() {
   return (
     <div className='profile-component'>
       <div className="profile-component-myVideo">
-        <video className='video-profile-me' muted playsInline preload loop src="https://framerusercontent.com/modules/assets/de1SZVgW6x8oriFKmGD2vCLl4M~QgE11NLqSikToAlO4zGwAzyGWgrXLn2cqTQMkVVJmig.mp4"></video>
+        <video className='video-profile-me' muted playsInline preload loop src="https://res.cloudinary.com/dxnzcewsy/image/upload/v1702292034/portfolio/videos/promp4-unscreen_yqh0lu.mp4"></video>
       </div>
       <h1>Video scroll scrub demo</h1>
       <h1>Video scroll scrub demo</h1>
