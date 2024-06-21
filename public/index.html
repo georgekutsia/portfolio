@@ -30,39 +30,43 @@
     <link rel="stylesheet" href="../src/index.css" />
     <title>React App</title>
   </head>
-  <body>
+  <body >
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+      <div  id="root"></div>
       <!-- <button id="stopPulseButton">Detener Pulso</button> -->
-
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-<script type="text/javascript">
-  let pulseInterval;
+    <link
+      href="https://www.jqueryscript.net/css/jquerysctipttop.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script type="text/javascript">
+      let pulseInterval;
 
-  let timeInterval = 800
-  let pulse = function () {
-    const colorRandom = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(
-      Math.random() * 256
-    )}, ${Math.floor(Math.random() * 256)})`;
-    let e = document.createElement("div");
-    e.setAttribute("class", "circle");
-    e.style.backgroundColor = colorRandom;
-    document.body.appendChild(e);
-    (e.style.top = event.pageY + "px"), (e.style.left = event.pageX + "px");
+      let timeInterval = 800;
+      let pulse = function () {
+        const colorRandom = `rgb(${Math.floor(
+          Math.random() * 256
+        )}, ${Math.floor(Math.random() * 256)}, ${Math.floor(
+          Math.random() * 256
+        )})`;
+        let e = document.createElement("div");
+        e.setAttribute("class", "circle");
+        e.style.backgroundColor = colorRandom;
+        document.body.appendChild(e);
+        (e.style.top = event.pageY + "px"), (e.style.left = event.pageX + "px");
 
-    pulseInterval = setTimeout(function () {
-      document.body.removeChild(e);
-    }, timeInterval);
-  };
+        pulseInterval = setTimeout(function () {
+          document.body.removeChild(e);
+        }, timeInterval);
+      };
 
-  document.addEventListener("click", pulse);
+      document.addEventListener("click", pulse);
 
-  // document.getElementById("stopPulseButton").addEventListener("click", function () {
-  //     timeInterval = 10;
-  // });
-  
-</script>
+      // document.getElementById("stopPulseButton").addEventListener("click", function () {
+      //     timeInterval = 10;
+      // });
+    </script>
 
     <script>
       AOS.init();

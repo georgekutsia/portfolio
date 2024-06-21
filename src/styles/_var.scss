@@ -1,7 +1,17 @@
 $my-grey: rgb(176, 203, 193);
 $my-orange: rgb(216, 101, 0);
-$my-black: rgb(0, 0, 0)  ;
-$my-white: rgb(255, 255, 255)  ;
-$violet: rgb(242, 0, 0);
-$blue: rgb(56, 41, 3);
+$my-black: rgb(0, 0, 0);
+$my-white: #e5e5e2;
+$my-red: rgb(242, 0, 0);
+$my-blue: rgb(56, 41, 3);
 $my-blue: rgb(5, 133, 218);
+
+:root {
+  --my-grey: #b0cbc1;
+  --my-orange: #d86500;
+  --my-black: #000000;
+  --my-white: #e5e5e2;
+  --my-red: #f20000;
+  --my-blue: #0949a9;
+  --my-blue: #0585da;
+}
