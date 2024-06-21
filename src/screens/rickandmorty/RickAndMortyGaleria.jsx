@@ -13,7 +13,6 @@ function RickAndMortyGaleria({data}) {
   }
   return (
     <>
-
     <input type="text" value={search} onChange={(ev) => setSearch(ev.target.value)}/>
     <div className="rickandmorty-center-gallery">
       {data

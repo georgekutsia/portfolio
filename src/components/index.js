@@ -9,18 +9,14 @@ export { default as Button1 } from "./buttons/button/Button1";
 export { default as Button2 } from "./buttons/button/Button2";
 export { default as Button3 } from "./buttons/button/Button3";
 
-
 // profile
 
 export { default as ProfileComponent } from "./profileComponent/ProfileComponent";
+export { default as ModeButtons } from "./profileComponent/modeButtons/ModeButtons";
 export { default as MyPicture } from "./profileComponent/myPicture/MyPicture";
 
-
-
-
-
-export {default as ListComments} from "./notes/note1/ListComments"
-export {default as List} from "./notes/note1/List"
+export { default as ListComments } from "./notes/note1/ListComments";
+export { default as List } from "./notes/note1/List";
 export { default as CircularNavbarLi } from "./navbars/circular-navbar/CircularNavbarLi";
 export { default as Gallery1 } from "./gallery/gallery1/Gallery1";
 export { default as Cart1 } from "./cart1/Cart1";

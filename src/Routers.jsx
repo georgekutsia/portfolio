@@ -9,6 +9,7 @@ function Routers() {
           <Route path="/components" element={<ComponentsScreens />} />
           <Route path="/profile" element={<Profile/>} />
           <Route path="/apis" element={<AllApis/>} />
+          <Route path="/" element={<Profile/>} />
           <Route path="/rickandmorty/characters-page" element={<CharactersPage />}/>
           <Route path="/rickandmorty/characters-page/:id" element={<ContactPage />}/>
           <Route path="/rickandmorty/favorites" element={<RickAndMortyFavorites />}/>

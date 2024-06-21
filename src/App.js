@@ -1,5 +1,5 @@
 import Routers from "./Routers";
-import { AllNavbars, CornerNavbar, MainFooter } from "./components";
+import {  CornerNavbar } from "./components";
 import React, { useState } from "react";
 import { PrimeReactProvider } from "primereact/api";
 import rickFavoriteData from "./data/rickfavorite.data";

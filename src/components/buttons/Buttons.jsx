@@ -22,11 +22,11 @@ function Buttons({closeComponent}) {
         <Button2 classBtn={"button9"}/>
       </div>
       <div className='buttons-box-div'>
-        <button3 classBtn={"button10"}/>
+        {/* <button3 classBtn={"button10"}/>
         <button3 classBtn={"button11"}/>
         <button3 classBtn={"button12"}/>
         <button3 classBtn={"button13"}/>
-        <button3 classBtn={"button14"}/>
+        <button3 classBtn={"button14"}/> */}
       </div>
     </div>
   )
