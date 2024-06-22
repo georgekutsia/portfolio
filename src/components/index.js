@@ -13,6 +13,7 @@ export { default as Button3 } from "./buttons/button/Button3";
 
 export { default as ProfileComponent } from "./profileComponent/ProfileComponent";
 export { default as ModeButtons } from "./profileComponent/modeButtons/ModeButtons";
+export { default as DayNightButton } from "./profileComponent/modeButtons/DayNightButton";
 export { default as MyPicture } from "./profileComponent/myPicture/MyPicture";
 
 export { default as ListComments } from "./notes/note1/ListComments";
