@@ -6,12 +6,10 @@ function GamerButton() {
   return (
       <div className="the-container-gamer">
         <input className="input-dayNight-gamer" type="checkbox" id="toggle-gamer"  />
-        <label className="label-dayNight-gamer" htmlFor="toggle-gamer">Normal-gamer</label>
+        <label className="label-dayNight-gamer" htmlFor="toggle-gamer">
+        {/* Normal-gamer */}
+        </label>
         <div className="day-night-cont-gamer">
-          <span className="the-sun-gamer"></span>
-          <div className="the-moon-gamer">
-            <span className="moon-inside-gamer"></span>
-          </div>
         </div>
         <div className="switch-gamer">
           <div className="moon-draw-gamer">
