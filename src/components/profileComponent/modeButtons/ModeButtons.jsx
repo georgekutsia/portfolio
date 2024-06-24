@@ -5,7 +5,6 @@ import DayNightButton from './DayNightButton';
 
 function ModeButtons() {
   const {modeDarkLight, handleChangeDarkLight } = useContext(GlobalContext);
-  const [firstBtnText, setFirstBtnText] = useState("dark");
   const [secondBtnText, setSecondBtnText] = useState("gamer");
   const [thirdBtnText, setThirdBtnText] = useState("fun");
 

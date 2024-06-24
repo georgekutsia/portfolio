@@ -1,10 +1,8 @@
-
-
 .profile-component {
   margin: auto;
   // width: 700px;
   position: relative;
-  &-myVideo {
+  &-picture {
     position: sticky;
     top: 10px;
     width: calc(120px + 12vw);
