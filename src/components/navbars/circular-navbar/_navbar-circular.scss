@@ -112,22 +112,24 @@
 .orb {
     border-radius: 50%;
     box-shadow:
-        inset 20px 0 60px $my-orange,
-        inset -20px 0 60px $blue,
-        inset 20px 0 300px $my-orange,
-        inset -20px 0 300px $blue,
-          -10px 0 30px $my-orange,
-          10px 0 30px $blue;
+        // inset 20px 0 60px $my-orange,
+        // inset -20px 0 60px $blue,
+        // inset 20px 0 300px $my-orange,
+        // inset -20px 0 300px $blue,
+          // -10px 0 30px $my-orange,
+          // 10px 0 30px $blue;
+          10px;
 }
 .small-orb {
     border-radius: 50%;
     box-shadow:
-        inset 20px 0 60px $my-orange,
-        inset -20px 0 60px $blue,
-        inset 20px 0 300px $my-orange,
-        inset -20px 0 300px $blue,
-              0px 0 5px $my-orange,
-              0px 0 5px $blue;
+        // inset 20px 0 60px $my-orange,
+        // inset -20px 0 60px $blue,
+        // inset 20px 0 300px $my-orange,
+        // inset -20px 0 300px $blue,
+        //       0px 0 5px $my-orange,
+        //       0px 0 5px $blue;
+        10px;
 }
 .circularNav-a:hover{
   scale: 1.2;

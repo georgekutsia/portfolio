@@ -3,9 +3,10 @@
   --my-orange: #d86500;
   --my-black: #000000;
   --my-white: #e5e5e2;
-  --violet: #f20000;
-  --blue: #382903;
+  --my-red: #f20000;
+  --my-blue: #0949a9;
   --my-blue: #0585da;
+  --my-lightBlue: #48E8AA;
 }
 
 * {
@@ -26,9 +27,10 @@ a {
   --my-orange: #d86500;
   --my-black: #000000;
   --my-white: #e5e5e2;
-  --violet: #f20000;
-  --blue: #382903;
+  --my-red: #f20000;
+  --my-blue: #0949a9;
   --my-blue: #0585da;
+  --my-lightBlue: #48E8AA;
 }
 
 .calculator {
@@ -200,12 +202,12 @@ a {
 
 .orb {
   border-radius: 50%;
-  box-shadow: inset 20px 0 60px rgb(216, 101, 0), inset -20px 0 60px rgb(56, 41, 3), inset 20px 0 300px rgb(216, 101, 0), inset -20px 0 300px rgb(56, 41, 3), -10px 0 30px rgb(216, 101, 0), 10px 0 30px rgb(56, 41, 3);
+  box-shadow: 10px;
 }
 
 .small-orb {
   border-radius: 50%;
-  box-shadow: inset 20px 0 60px rgb(216, 101, 0), inset -20px 0 60px rgb(56, 41, 3), inset 20px 0 300px rgb(216, 101, 0), inset -20px 0 300px rgb(56, 41, 3), 0px 0 5px rgb(216, 101, 0), 0px 0 5px rgb(56, 41, 3);
+  box-shadow: 10px;
 }
 
 .circularNav-a:hover {
@@ -590,11 +592,212 @@ a {
   min-width: 60px;
 }
 
+/* DAY STYLES*/
+/* DAY STYLES*/
+.the-container {
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  bottom: 0;
+  right: 0;
+}
+
+.input-dayNight[type=checkbox] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.input-dayNight#toggle[type=checkbox] {
+  display: none;
+}
+
+.label-dayNight {
+  position: absolute;
+  height: 40px;
+  width: 70px;
+  display: block;
+  top: 0px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.switch {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background: rgb(216, 101, 0);
+  box-shadow: inset 0 0 10px #888888;
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+  height: 30px;
+  width: 70px;
+  margin: 0px auto 30px auto;
+}
+
+.switch .moon-draw {
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  background: rgb(0, 0, 0);
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1.6px solid rgb(216, 101, 0);
+  -webkit-clip-path: 50% 20%, 100% 50%, 50% 100%, 0% 50%;
+          clip-path: 50% 20%, 100% 50%, 50% 100%, 0% 50%;
+}
+
+.moon-draw::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+  border-radius: 50%;
+  -webkit-clip-path: circle(10px at 19px 10px);
+          clip-path: circle(10px at 19px 10px);
+}
+
+.day-night-cont {
+  display: block;
+  position: absolute;
+  width: 60px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 40px;
+  top: 0px;
+}
+
+.day-night-cont .the-sun {
+  display: block;
+  position: absolute;
+  left: 35%;
+  top: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: #000000;
+  box-shadow: 0px 0px 10px #000000;
+}
+
+.day-night-cont .the-moon {
+  left: 35%;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1px solid black;
+  -webkit-clip-path: 50% 20%, 100% 50%, 50% 100%, 0% 50%;
+          clip-path: 50% 20%, 100% 50%, 50% 100%, 0% 50%;
+}
+
+.day-night-cont .the-moon::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+  border-radius: 50%;
+  -webkit-clip-path: circle(10px at 17px 10px);
+          clip-path: circle(10px at 17px 10px);
+}
+
+.day-night-cont .the-moon .moon-inside {
+  display: block;
+  position: absolute;
+  left: 8px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: rgb(0, 0, 0);
+}
+
+/* TOGGLE */
+.switch .moon-draw {
+  transition: left 0.25s ease-in-out;
+  -webkit-transition: left 0.25s ease-in-out;
+}
+
+.input-dayNight[type=checkbox]:checked ~ .switch .moon-draw {
+  position: absolute;
+  left: 44px;
+}
+
+.input-dayNight[type=checkbox]:checked ~ .day-night-cont .the-sun {
+  position: absolute;
+  transition: 1s ease-in-out all;
+  animation: sunUp 1.9s linear forwards;
+}
+
+.input-dayNight[type=checkbox]:checked ~ .switch .moon-draw::before {
+  background-color: #FFE067;
+  -webkit-clip-path: circle(100px at 17px 10px);
+          clip-path: circle(100px at 17px 10px);
+  transition: 1s ease-in-out;
+}
+
+.input-dayNight[type=checkbox]:not(:checked) ~ .day-night-cont .the-moon {
+  position: absolute;
+  transition: 1s ease-in-out all;
+  animation: moonUp 1.9s linear forwards;
+}
+
+.input-dayNight[type=checkbox]:not(:checked) ~ .switch .moon-draw::before {
+  transition: 0.3s ease-in-out;
+  background-color: rgb(216, 101, 0);
+}
+
+/* NIGHT ANIMATION */
+.input-dayNight[type=checkbox]:checked ~ .c-window {
+  background: #222222;
+}
+
+.input-dayNight[type=checkbox]:checked ~ .c-window .the-fox {
+  background: #C74628;
+}
+
+@keyframes sunUp {
+  10% {
+    transform: translateX(-15%) translateY(50px);
+    background: #FFE067;
+    box-shadow: 0px 0px 10px #FFC41D;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-15%) translateY(50px);
+    background: #FFE067;
+    box-shadow: 0px 0px 10px #FFC41D;
+  }
+}
+@keyframes moonUp {
+  10% {
+    transform: translateX(-15%) translateY(50px);
+    background: #f4f3f0;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-15%) translateY(50px);
+  }
+}
 .profile-component {
   margin: auto;
   position: relative;
 }
-.profile-component-myVideo {
+.profile-component-picture {
   position: sticky;
   top: 10px;
   width: calc(120px + 12vw);
@@ -607,7 +810,7 @@ a {
   line-height: 30px;
   transition: 1s ease-in-out;
 }
-.profile-component-myVideo::before, .profile-component-myVideo::after {
+.profile-component-picture::before, .profile-component-picture::after {
   content: "";
   position: absolute;
   width: 70%;
@@ -616,17 +819,17 @@ a {
   transform: scaleX(0);
   transition: transform 1s ease-in-out;
 }
-.profile-component-myVideo::before {
+.profile-component-picture::before {
   top: 0;
   right: 0;
   transform-origin: bottom right;
 }
-.profile-component-myVideo::after {
+.profile-component-picture::after {
   bottom: 0;
   left: 0;
   transform-origin: top left;
 }
-.profile-component-myVideo::before, .profile-component-myVideo::after {
+.profile-component-picture::before, .profile-component-picture::after {
   animation: expandBorder 2s forwards ease-in-out;
 }
 @keyframes expandBorder {
@@ -1428,4 +1631,11 @@ body {
   body {
     margin: 20px calc(10px + 10vw);
   }
+}
+.dark-text {
+  color: red;
+}
+
+.light-text {
+  color: blue;
 }/*# sourceMappingURL=index.css.map */

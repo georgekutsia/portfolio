@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { GlobalContext } from '../../../App';
 
 function Button1({classBtn}) {
+  const {darkLightText} = useContext(GlobalContext);
+
   return (
-      <button className={`custom-btn1 ${classBtn}`}> <span> Hover </span></button>
+      <button  style={{color: `${darkLightText}`}} className={`custom-btn1 ${classBtn}`}> <span> Hover </span></button>
   )
 }
 

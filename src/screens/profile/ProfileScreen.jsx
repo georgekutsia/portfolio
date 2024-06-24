@@ -1,10 +1,9 @@
 import React from 'react'
-import { ProfileComponent, ModeButtons } from '../../components'
+import { ProfileComponent } from '../../components'
 
 function ProfileScreen() {
   return (
     <div className='profile'>
-    <ModeButtons/>
     <ProfileComponent/>
     </div>
   )

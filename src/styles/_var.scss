@@ -5,7 +5,9 @@ $my-white: #e5e5e2;
 $my-red: rgb(242, 0, 0);
 $my-blue: rgb(56, 41, 3);
 $my-blue: rgb(5, 133, 218);
-
+$my-lightBlue: #48E8AA;
+$sun-yellow:#FFE067;
+$sun-yellow-shadow:#FFC41D;
 :root {
   --my-grey: #b0cbc1;
   --my-orange: #d86500;
@@ -14,4 +16,6 @@ $my-blue: rgb(5, 133, 218);
   --my-red: #f20000;
   --my-blue: #0949a9;
   --my-blue: #0585da;
+  --my-lightBlue: #48E8AA;
+
 }
