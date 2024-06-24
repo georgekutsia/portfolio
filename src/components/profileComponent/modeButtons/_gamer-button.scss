@@ -1,0 +1,203 @@
+.the-container-gamer {
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  bottom: 0;
+  right: 80px;
+}
+
+.input-dayNight-gamer[type=checkbox] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.input-dayNight-gamer#toggle-gamer[type=checkbox] {
+  display: none;
+}
+
+
+.label-dayNight-gamer {
+  position: absolute;
+  height: 40px;
+  width: 70px;
+  display: block; 
+  top: 0px; bottom: 0; right: 0; left: 0;
+  z-index: 9999;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 0.6rem;
+  padding-top: 7px;
+  opacity: 0;
+  text-align: center;
+}
+.label-dayNight-gamer:hover {
+  opacity: 0.5;
+  transition: 0.5s ease-in-out;
+
+}
+
+.switch-gamer {
+  display: block; 
+  position: relative;
+  border-bottom: 1px solid #000; /* $my-black replaced */
+  border-radius: 25px;
+  background: #ff6600; /* $my-orange replaced */
+  box-shadow: inset 0 0 10px #888888;
+  -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
+  height: 30px;
+  width: 70px;
+  margin: 0px auto 30px auto;
+}
+
+.switch-gamer .moon-draw-gamer {
+  display: block; 
+  position: absolute;
+  border-radius: 100%;
+  background: #000; /* $my-black replaced */
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1.6px solid #ff6600; /* $my-orange replaced */
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.moon-draw-gamer::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+  border-radius: 50%;
+  clip-path: circle(3px at 19px 12px);
+}
+
+.day-night-cont-gamer {
+  display: block;
+  position: absolute;
+  width: 60px;
+  margin: 0 auto;
+  left: 0; right: 0; top: 0; bottom: 0;
+  height: 40px;
+  top: 0px;
+}
+
+.day-night-cont-gamer .the-sun-gamer {
+  display: block;
+  position: absolute;
+  left: 35%;
+  top: 10px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: #000000;
+  box-shadow: 0px 0px 10px #000000;
+}
+
+.day-night-cont-gamer .the-moon-gamer {
+  position: absolute; /* Added */
+  left: 35%;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  background-color: #ffffffd4;
+  border-radius: 50%;
+  border: 1px solid black;
+  clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.day-night-cont-gamer .the-moon-gamer::before {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+  border-radius: 50%;
+  clip-path: circle(10px at 17px 10px);
+}
+
+.day-night-cont-gamer .the-moon-gamer .moon-inside-gamer {
+  display: block;
+  position: absolute;
+  left: 8px;
+  height: 20px;
+  width: 20px;
+  border-radius: 100%;
+  background: #000; /* $my-black replaced */
+}
+
+/* TOGGLE-gamer */
+
+.switch-gamer .moon-draw-gamer {
+  transition: left .25s ease-in-out;
+  -webkit-transition: left .25s ease-in-out;
+}
+
+.input-dayNight-gamer[type=checkbox]:checked ~ .switch-gamer .moon-draw-gamer {
+  position: absolute;
+  left: 44px;
+}
+
+.input-dayNight-gamer[type=checkbox]:checked ~ .day-night-cont-gamer .the-sun-gamer {
+  position: absolute;
+  transition: 1s ease-in-out all;
+  animation: sunUp 1.9s linear forwards;
+}
+
+.input-dayNight-gamer[type=checkbox]:checked ~ .switch-gamer .moon-draw-gamer::before {
+  background-color: #ffd700; /* $sun-yellow replaced */
+  clip-path: circle(3px at 19px 12px);
+  clip-path: circle(3px at 9px 8px);
+  transition: 0.5s ease-in-out;
+}
+
+.input-dayNight-gamer[type=checkbox]:not(:checked) ~ .day-night-cont-gamer .the-moon-gamer {
+  position: absolute;
+  transition: 1s ease-in-out all;
+  animation: moonUp 1.9s linear forwards;
+}
+
+.input-dayNight-gamer[type=checkbox]:not(:checked) ~ .switch-gamer .moon-draw-gamer::before {
+  transition: 0.3s ease-in-out;
+  background-color: #ff6600; /* $my-orange replaced */
+}
+
+/* NIGHT ANIMATION */
+
+.input-dayNight-gamer[type=checkbox]:checked ~ .c-window {
+  background: #222222;
+}
+
+.input-dayNight-gamer[type=checkbox]:checked ~ .c-window .the-fox {
+  background: #C74628;
+}
+
+@keyframes sunUp {
+  10% {
+    transform: translateX(-15%) translateY(50px);
+    background: $sun-yellow; /* $sun-yellow replaced */
+    box-shadow: 0px 0px 10px $sun-yellow-shadow; /* $sun-yellow-shadow replaced */
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-15%) translateY(50px);
+    background: $sun-yellow; /* $sun-yellow replaced */
+    box-shadow: 0px 0px 10px $sun-yellow-shadow; /* $sun-yellow-shadow replaced */
+  }
+}
+
+@keyframes moonUp {
+  10% {
+    transform: translateX(-15%) translateY(50px);
+    background: #f4f3f0;
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-15%) translateY(50px);
+  }
+}
