@@ -7,7 +7,7 @@ function GamerButton() {
       <div className="the-container-gamer">
         <input className="input-dayNight-gamer" type="checkbox" id="toggle-gamer"  />
         <label className="label-dayNight-gamer" htmlFor="toggle-gamer">
-        {/* Normal-gamer */}
+        Normal-gamer
         </label>
         <div className="day-night-cont-gamer">
         </div>

@@ -60,8 +60,20 @@
 .label-dayNight:hover {
     opacity: 0.5;
     transition: 0.5s ease-in-out;
-}
+    animation: revertOpacity 3s forwards;
 
+  }
+  
+  @keyframes revertOpacity {
+    50% {
+      opacity: 0.5;
+    text-shadow: 1px 1px 1px white;
+
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 .switch {
   display: block; 
   position: relative;
@@ -192,7 +204,7 @@ animation: moonUp 1.9s linear forwards ;
 
 
 .input-dayNight[type=checkbox]:checked ~ .c-window .the-fox{
-  background: #C74628;
+  background: $my-orange;
 }
 
 @keyframes sunUp {

@@ -1,6 +1,6 @@
 :root {
   --my-grey: #b0cbc1;
-  --my-orange: #d86500;
+  --my-orange: #C74628;
   --my-black: #000000;
   --my-white: #e5e5e2;
   --my-red: #f20000;
@@ -24,7 +24,7 @@ a {
 
 :root {
   --my-grey: #b0cbc1;
-  --my-orange: #d86500;
+  --my-orange: #C74628;
   --my-black: #000000;
   --my-white: #e5e5e2;
   --my-red: #f20000;
@@ -100,7 +100,7 @@ a {
   font-weight: bold;
   color: rgb(0, 0, 0);
   transition: 0.24s 0.2s;
-  background-color: rgb(216, 101, 0);
+  background-color: #C74628;
 }
 
 .pruebas-navbar-mainNavbar-h2 {
@@ -255,7 +255,7 @@ a {
   background-color: white;
   padding: 5px 10px;
   border-radius: 10px;
-  background-color: rgb(216, 101, 0);
+  background-color: #C74628;
 }
 .allNavbars li {
   opacity: 0;
@@ -312,7 +312,7 @@ a {
 }
 
 .cornerNavbar-navbar-mainNavbar:hover {
-  background-color: rgb(216, 101, 0);
+  background-color: #C74628;
   color: rgb(0, 0, 0);
 }
 
@@ -366,7 +366,7 @@ a {
   margin: 40px;
   line-height: 45px;
   border-radius: 50%;
-  background-color: rgb(216, 101, 0);
+  background-color: #C74628;
   position: absolute;
   font-size: calc(16px + 0.5vw);
   color: rgb(0, 0, 0);
@@ -374,7 +374,7 @@ a {
 }
 
 .cornerNavbar-navbar-mainNavbar:hover .cornerNavbar-navbar-mainNavbar-menu li a {
-  background-color: rgb(216, 101, 0);
+  background-color: #C74628;
   color: rgb(0, 0, 0);
 }
 
@@ -569,7 +569,7 @@ a {
 }
 
 .close-all-components {
-  color: rgb(216, 101, 0);
+  color: #C74628;
   font-size: 2rem;
 }
 
@@ -635,14 +635,24 @@ a {
 .label-dayNight:hover {
   opacity: 0.5;
   transition: 0.5s ease-in-out;
+  animation: revertOpacity 3s forwards;
 }
 
+@keyframes revertOpacity {
+  50% {
+    opacity: 0.5;
+    text-shadow: 1px 1px 1px white;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .switch {
   display: block;
   position: relative;
   border-bottom: 1px solid rgb(0, 0, 0);
   border-radius: 25px;
-  background: rgb(216, 101, 0);
+  background: #C74628;
   box-shadow: inset 0 0 10px #888888;
   -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
   height: 30px;
@@ -661,7 +671,7 @@ a {
   height: 20px;
   background-color: #fff;
   border-radius: 50%;
-  border: 1.6px solid rgb(216, 101, 0);
+  border: 1.6px solid #C74628;
   -webkit-clip-path: 50% 20%, 100% 50%, 50% 100%, 0% 50%;
           clip-path: 50% 20%, 100% 50%, 50% 100%, 0% 50%;
 }
@@ -767,7 +777,7 @@ a {
 
 .input-dayNight[type=checkbox]:not(:checked) ~ .switch .moon-draw::before {
   transition: 0.3s ease-in-out;
-  background-color: rgb(216, 101, 0);
+  background-color: #C74628;
 }
 
 /* NIGHT ANIMATION */
@@ -810,7 +820,7 @@ a {
   margin: auto;
   top: 0px;
   bottom: 0;
-  right: 80px;
+  right: 75px;
 }
 
 .input-dayNight-gamer[type=checkbox] {
@@ -843,14 +853,23 @@ a {
 .label-dayNight-gamer:hover {
   opacity: 0.5;
   transition: 0.5s ease-in-out;
+  animation: revertOpacity 3s forwards;
 }
 
+@keyframes revertOpacity {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .switch-gamer {
   display: block;
   position: relative;
   border-bottom: 1px solid #000; /* $my-black replaced */
   border-radius: 25px;
-  background: #ff6600; /* $my-orange replaced */
+  background: #C74628; /* $my-orange replaced */
   box-shadow: inset 0 0 10px #888888;
   -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
   height: 30px;
@@ -869,12 +888,23 @@ a {
   height: 20px;
   background-color: #fff;
   border-radius: 50%;
-  border: 1.6px solid #ff6600; /* $my-orange replaced */
+  border: 1.6px solid #C74628; /* $my-orange replaced */
   -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
           clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
 }
 
 .moon-draw-gamer::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+  border-radius: 50%;
+  -webkit-clip-path: circle(3px at 19px 12px);
+          clip-path: circle(3px at 19px 12px);
+}
+
+.moon-draw-gamer::after {
   content: "";
   position: absolute;
   width: 18px;
@@ -914,16 +944,24 @@ a {
 }
 
 .input-dayNight-gamer[type=checkbox]:checked ~ .switch-gamer .moon-draw-gamer::before {
-  background-color: #48E8AA; /* $sun-yellow replaced */
-  -webkit-clip-path: circle(3px at 8.5px 9.5px);
-          clip-path: circle(3px at 8.5px 9.5px);
+  background-color: #48E8AA;
+  -webkit-clip-path: circle(3px at 7.7px 6.5px);
+          clip-path: circle(3px at 7.7px 6.5px);
+  transition: 0.5s ease-in-out;
+  transform: rotate(100deg);
+}
+
+.input-dayNight-gamer[type=checkbox]:checked ~ .switch-gamer .moon-draw-gamer::after {
+  background-color: rgb(242, 0, 0);
+  -webkit-clip-path: circle(3px at 8.9px 13px);
+          clip-path: circle(3px at 8.9px 13px);
   transition: 0.5s ease-in-out;
   transform: rotate(100deg);
 }
 
 .input-dayNight-gamer[type=checkbox]:not(:checked) ~ .switch-gamer .moon-draw-gamer::before {
   transition: 0.3s ease-in-out;
-  background-color: #ff6600; /* $my-orange replaced */
+  background-color: #C74628; /* $my-orange replaced */
 }
 
 /* NIGHT ANIMATION */
@@ -932,6 +970,168 @@ a {
 }
 
 .input-dayNight-gamer[type=checkbox]:checked ~ .c-window .the-fox {
+  background: #C74628;
+}
+
+.the-container-cartoon {
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  bottom: 0;
+  right: 150px;
+}
+
+.input-dayNight-cartoon[type=checkbox] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.input-dayNight-cartoon#toggle-cartoon[type=checkbox] {
+  display: none;
+}
+
+.label-dayNight-cartoon {
+  position: absolute;
+  height: 40px;
+  width: 70px;
+  display: block;
+  top: 0px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 9999;
+  cursor: pointer;
+  margin: 0 auto;
+  font-size: 0.6rem;
+  padding-top: 7px;
+  opacity: 0;
+  text-align: center;
+}
+
+.label-dayNight-cartoon:hover {
+  opacity: 0.5;
+  transition: 0.5s ease-in-out;
+  animation: revertOpacity 3s forwards;
+}
+
+@keyframes revertOpacity {
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.switch-cartoon {
+  display: block;
+  position: relative;
+  border-bottom: 1px solid #000; /* $my-black replaced */
+  border-radius: 25px;
+  background: #C74628; /* $my-orange replaced */
+  box-shadow: inset 0 0 10px #888888;
+  -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+  height: 30px;
+  width: 70px;
+  margin: 0px auto 30px auto;
+  border: 0.1px solid #C74628;
+}
+
+.switch-cartoon .moon-draw-cartoon {
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  background: #000; /* $my-black replaced */
+  top: 4px;
+  left: 4px;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 1.4px solid #e5e5e2; /* $my-orange replaced */
+  -webkit-clip-path: hexagon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+          clip-path: hexagon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+}
+
+.moon-draw-cartoon::before {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #000;
+  border-radius: 50%;
+  -webkit-clip-path: circle(7px at 18px 9px);
+          clip-path: circle(7px at 18px 9px);
+}
+
+.moon-draw-cartoon::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: #C74628;
+  border-radius: 50%;
+  -webkit-clip-path: circle(7.5px at -1px 8.5px);
+          clip-path: circle(7.5px at -1px 8.5px);
+}
+
+.day-night-cont-cartoon {
+  display: block;
+  position: absolute;
+  width: 60px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 40px;
+  top: 0px;
+  transform: rotate(360deg);
+  transition: 1s ease-in-out;
+}
+
+/* TOGGLE-cartoon */
+.switch-cartoon .moon-draw-cartoon {
+  transition: left 0.25s ease-in-out;
+  -webkit-transition: left 0.25s ease-in-out;
+}
+
+.input-dayNight-cartoon[type=checkbox]:checked ~ .switch-cartoon .moon-draw-cartoon {
+  position: absolute;
+  left: 44px;
+  transform: rotate(360deg);
+  transition: 1s ease-in-out;
+}
+
+.input-dayNight-cartoon[type=checkbox]:checked ~ .switch-cartoon .moon-draw-cartoon::before {
+  background-color: #48E8AA; /* $sun-yellow replaced */
+  -webkit-clip-path: circle(3px at 9.5px 9px);
+          clip-path: circle(3px at 9.5px 9px);
+  transition: 0.5s ease-in-out;
+  transform: rotate(230deg);
+  transform: matrix(-2, 2, -2, 2.4, -1, -2);
+}
+
+.input-dayNight-cartoon[type=checkbox]:checked ~ .switch-cartoon .moon-draw-cartoon::after {
+  background-color: #48E8AA; /* $sun-yellow replaced */
+  -webkit-clip-path: circle(3px at 8px 9px);
+          clip-path: circle(3px at 8px 9px);
+  transition: 0.5s ease-in-out;
+  transform: rotate(100deg);
+  transform: matrix(2, 2, 2, 2.4, 1, 2);
+}
+
+.input-dayNight-cartoon[type=checkbox]:not(:checked) ~ .switch-cartoon .moon-draw-cartoon::before {
+  transition: 0.3s ease-in-out;
+  background-color: #C74628; /* $my-orange replaced */
+}
+
+/* NIGHT ANIMATION */
+.input-dayNight-cartoon[type=checkbox]:checked ~ .c-window {
+  background: #222222;
+}
+
+.input-dayNight-cartoon[type=checkbox]:checked ~ .c-window .the-fox {
   background: #C74628;
 }
 
