@@ -31,11 +31,6 @@
   opacity: 0;
   text-align: center;
 }
-.label-dayNight-gamer:hover {
-  opacity: 0.5;
-  transition: 0.5s ease-in-out;
-  animation: revertOpacity 3s forwards;
-}
 
 @keyframes revertOpacity {
   50% {
@@ -150,4 +145,19 @@
 
 .input-dayNight-gamer[type=checkbox]:checked ~ .c-window .the-fox {
   background: $my-orange;
+}
+
+.form-select{
+  background-color: $my-orange;
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 225px;
+  width: fit-content;
+  border: none;
+  border-radius: 20%;
+  color: white;
+  font-weight: 600;
+  z-index: 3
 }

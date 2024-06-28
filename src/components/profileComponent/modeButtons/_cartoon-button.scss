@@ -31,11 +31,6 @@
   opacity: 0;
   text-align: center;
 }
-.label-dayNight-cartoon:hover {
-  opacity: 0.5;
-  transition: 0.5s ease-in-out;
-  animation: revertOpacity 3s forwards;
-}
 
 @keyframes revertOpacity {
   50% {

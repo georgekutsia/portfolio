@@ -5,10 +5,17 @@ import React, { useState, useEffect } from "react";
 import { PrimeReactProvider } from "primereact/api";
 import rickFavoriteData from "./data/rickfavorite.data";
 export const GlobalContext = React.createContext();
+
 function App() {
   const [favorites, setFavorites] = useState(rickFavoriteData);
   const [modeDarkLight, setModeDarkLight] = useState("dark");
   const [darkLightText, setdarkLightText] = useState("white")
+  const [language, setLanguage] = useState("spa"); 
+  const [normalCartoon, setNormalCartoon] = useState(true); 
+
+  const spa = "esp";
+  const eng = "eng";
+  const ger = "ger";
 
   const handleChangeDarkLight = () => {
     const newMode = modeDarkLight === "dark" ? "light" : "dark";
@@ -24,9 +31,8 @@ function App() {
 
   return (
     <PrimeReactProvider>
-      <GlobalContext.Provider value={{ favorites, setFavorites, modeDarkLight, setModeDarkLight, handleChangeDarkLight, darkLightText}}>
+      <GlobalContext.Provider value={{ favorites, setFavorites, modeDarkLight, setModeDarkLight, handleChangeDarkLight, darkLightText, spa, eng, ger, language, setLanguage, normalCartoon, setNormalCartoon}}>
         <div >
-        <h1 style={{color: `${darkLightText}`}}>bla</h1>
           <ModeButtons/>
           <CornerNavbar />
           <Routers />

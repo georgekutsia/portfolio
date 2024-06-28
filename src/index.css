@@ -1,3 +1,4 @@
+@charset "UTF-8";
 :root {
   --my-grey: #b0cbc1;
   --my-orange: #C74628;
@@ -239,10 +240,6 @@ a {
   background-color: greenyellow;
   width: 50px;
 }
-.note1-btn {
-  background-color: blue;
-}
-
 .allNavbars-ul {
   display: flex;
   justify-content: space-around;
@@ -585,7 +582,6 @@ a {
   top: 0;
   margin-top: 30px;
   padding-right: 80px;
-  background-color: blue;
 }
 
 .modeBtn {
@@ -632,16 +628,10 @@ a {
   text-align: center;
 }
 
-.label-dayNight:hover {
-  opacity: 0.5;
-  transition: 0.5s ease-in-out;
-  animation: revertOpacity 3s forwards;
-}
-
 @keyframes revertOpacity {
   50% {
     opacity: 0.5;
-    text-shadow: 1px 1px 1px white;
+    text-shadow: 1px 1px 1px #e5e5e2;
   }
   100% {
     opacity: 1;
@@ -652,7 +642,7 @@ a {
   position: relative;
   border-bottom: 1px solid rgb(0, 0, 0);
   border-radius: 25px;
-  background: #C74628;
+  background-color: #C74628;
   box-shadow: inset 0 0 10px #888888;
   -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
   height: 30px;
@@ -664,7 +654,7 @@ a {
   display: block;
   position: absolute;
   border-radius: 100%;
-  background: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
   top: 4px;
   left: 4px;
   width: 20px;
@@ -681,7 +671,7 @@ a {
   position: absolute;
   width: 18px;
   height: 18px;
-  background-color: #000;
+  background-color: rgb(0, 0, 0);
   border-radius: 50%;
   -webkit-clip-path: circle(10px at 19px 10px);
           clip-path: circle(10px at 19px 10px);
@@ -708,8 +698,8 @@ a {
   height: 20px;
   width: 20px;
   border-radius: 100%;
-  background: #000000;
-  box-shadow: 0px 0px 10px #000000;
+  background-color: rgb(0, 0, 0);
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 
 .day-night-cont .the-moon {
@@ -717,9 +707,9 @@ a {
   top: 10px;
   width: 20px;
   height: 20px;
-  background-color: #fff;
+  background-color: #e5e5e2;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   -webkit-clip-path: 50% 20%, 100% 50%, 50% 100%, 0% 50%;
           clip-path: 50% 20%, 100% 50%, 50% 100%, 0% 50%;
 }
@@ -742,7 +732,7 @@ a {
   height: 20px;
   width: 20px;
   border-radius: 100%;
-  background: rgb(0, 0, 0);
+  background-color: rgb(0, 0, 0);
 }
 
 /* TOGGLE */
@@ -782,31 +772,31 @@ a {
 
 /* NIGHT ANIMATION */
 .input-dayNight[type=checkbox]:checked ~ .c-window {
-  background: #222222;
+  background-color: #222222;
 }
 
 .input-dayNight[type=checkbox]:checked ~ .c-window .the-fox {
-  background: #C74628;
+  background-color: #C74628;
 }
 
 @keyframes sunUp {
   10% {
     transform: translateX(-15%) translateY(50px);
-    background: #FFE067; /* $sun-yellow replaced */
+    background-color: #FFE067; /* $sun-yellow replaced */
     box-shadow: 0px 0px 10px #FFC41D; /* $sun-yellow-shadow replaced */
     opacity: 1;
   }
   100% {
     opacity: 0;
     transform: translateX(-15%) translateY(50px);
-    background: #FFE067; /* $sun-yellow replaced */
+    background-color: #FFE067; /* $sun-yellow replaced */
     box-shadow: 0px 0px 10px #FFC41D; /* $sun-yellow-shadow replaced */
   }
 }
 @keyframes moonUp {
   10% {
     transform: translateX(-15%) translateY(50px);
-    background: #f4f3f0;
+    background-color: #f4f3f0;
     opacity: 1;
   }
   100% {
@@ -848,12 +838,6 @@ a {
   padding-top: 7px;
   opacity: 0;
   text-align: center;
-}
-
-.label-dayNight-gamer:hover {
-  opacity: 0.5;
-  transition: 0.5s ease-in-out;
-  animation: revertOpacity 3s forwards;
 }
 
 @keyframes revertOpacity {
@@ -973,6 +957,22 @@ a {
   background: #C74628;
 }
 
+.form-select {
+  background-color: #C74628;
+  display: block;
+  position: absolute;
+  margin: auto;
+  top: 0px;
+  right: 225px;
+  width: -moz-fit-content;
+  width: fit-content;
+  border: none;
+  border-radius: 20%;
+  color: white;
+  font-weight: 600;
+  z-index: 3;
+}
+
 .the-container-cartoon {
   display: block;
   position: absolute;
@@ -1007,12 +1007,6 @@ a {
   padding-top: 7px;
   opacity: 0;
   text-align: center;
-}
-
-.label-dayNight-cartoon:hover {
-  opacity: 0.5;
-  transition: 0.5s ease-in-out;
-  animation: revertOpacity 3s forwards;
 }
 
 @keyframes revertOpacity {
@@ -1138,19 +1132,36 @@ a {
 .profile-component {
   margin: auto;
   position: relative;
+  height: calc(1000px + 20vw);
+}
+.profile-component-picture-wrapper { /* Safari */
+  position: sticky;
+  top: 0;
+  overflow: hidden;
 }
 .profile-component-picture {
-  position: sticky;
-  top: 10px;
-  width: calc(120px + 12vw);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100px + 12vw);
   height: calc(70px + 12vw);
   margin-top: 100px;
   border: 2px solid transparent;
-  overflow: hidden;
+  overflow: visible;
   border-top-right-radius: 20px;
   border-bottom-left-radius: 20px;
   line-height: 30px;
   transition: 1s ease-in-out;
+  z-index: 1;
+  position: relative; /* Para contener pseudo-elementos */
+}
+.profile-component-picture-img {
+  width: calc(120px + 8vw);
+  position: relative; /* Cambiado a relative para la posición de flexbox */
+  top: 0; /* Eliminado top y left */
+  left: 0;
+  z-index: 2;
+  margin-top: -40px;
 }
 .profile-component-picture::before, .profile-component-picture::after {
   content: "";
@@ -1165,21 +1176,23 @@ a {
   top: 0;
   right: 0;
   transform-origin: bottom right;
+  z-index: 1;
 }
 .profile-component-picture::after {
   bottom: 0;
   left: 0;
   transform-origin: top left;
+  z-index: 3;
 }
 .profile-component-picture::before, .profile-component-picture::after {
   animation: expandBorder 2s forwards ease-in-out;
 }
+
 @keyframes expandBorder {
   to {
     transform: scaleX(1);
   }
 }
-
 .buttons-box-div {
   display: flex;
   justify-content: space-evenly;

@@ -1,19 +1,39 @@
 .profile-component {
   margin: auto;
-  // width: 700px;
   position: relative;
-  &-picture {
+  height: calc(1000px + 20vw);
+  &-picture-wrapper {
+    position: -webkit-sticky; /* Safari */
     position: sticky;
-    top: 10px;
-    width: calc(120px + 12vw);
+    top: 0;
+    overflow: hidden; 
+  }
+
+  &-picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: calc(100px + 12vw);
     height: calc(70px + 12vw);
     margin-top: 100px;
     border: 2px solid transparent;
-    overflow: hidden;
+    overflow: visible; 
     border-top-right-radius: 20px;
     border-bottom-left-radius: 20px;
     line-height: 30px;
     transition: 1s ease-in-out;
+    z-index: 1;
+    position: relative; /* Para contener pseudo-elementos */
+
+    &-img {
+      width: calc(120px + 8vw);
+      position: relative; /* Cambiado a relative para la posición de flexbox */
+      top: 0; /* Eliminado top y left */
+      left: 0;
+      z-index: 2; 
+      margin-top: -40px;
+    }
+
     &::before,
     &::after {
       content: '';
@@ -29,20 +49,23 @@
       top: 0;
       right: 0;
       transform-origin: bottom right;
+      z-index: 1; 
     }
     &::after {
-      bottom: 0;
+      bottom: 0; 
       left: 0;
       transform-origin: top left;
+      z-index: 3;
     }
     &::before,
     &::after {
       animation: expandBorder 2s forwards ease-in-out;
     }
-    @keyframes expandBorder {
-      to {
-        transform: scaleX(1);
-      }
-    }
+  }
+}
+
+@keyframes expandBorder {
+  to {
+    transform: scaleX(1);
   }
 }

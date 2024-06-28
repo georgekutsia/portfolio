@@ -5,9 +5,7 @@
   right: calc(10px + 5vw);
   top: 0;
   margin-top: 30px;
-  padding-right: 80px;
-  background-color: blue;
-  
+  padding-right: 80px;  
 }
 
 .modeBtn{
@@ -32,6 +30,7 @@
   bottom: 0;
   right: 0;
 }
+
 .input-dayNight[type=checkbox] {
     position: absolute;
     visibility: hidden;
@@ -57,42 +56,36 @@
     opacity: 0;
     text-align: center;
 }
-.label-dayNight:hover {
-    opacity: 0.5;
-    transition: 0.5s ease-in-out;
-    animation: revertOpacity 3s forwards;
 
-  }
-  
   @keyframes revertOpacity {
     50% {
       opacity: 0.5;
-    text-shadow: 1px 1px 1px white;
+    text-shadow: 1px 1px 1px $my-white;
 
     }
     100% {
       opacity: 1;
     }
   }
+
 .switch {
   display: block; 
   position: relative;
   border-bottom: 1px solid $my-black;
   border-radius: 25px;
-  background: $my-orange;
+  background-color: $my-orange;
   box-shadow: inset 0 0 10px #888888;
   -webkit-box-shadow: inset 0 0 10px rgba(0,0,0,0.25);
   height: 30px;
   width: 70px;
   margin: 0px auto 30px auto;
-  
 }
 
 .switch .moon-draw{
   display: block; 
   position: absolute;
   border-radius: 100%;
-  background: $my-black;
+  background-color: $my-black;
   top: 4px;
   left: 4px;
   width: 20px;
@@ -107,10 +100,11 @@
   position: absolute;
   width: 18px;
   height: 18px;
-  background-color: #000;
+  background-color: $my-black;
   border-radius: 50%;
   clip-path: circle(10px at 19px 10px);
 }
+
 .day-night-cont {
   display: block;
   position: absolute;
@@ -129,8 +123,8 @@
   height: 20px;
   width: 20px;
   border-radius: 100%;
-  background: #000000;
-  box-shadow: 0px 0px 10px #000000;
+  background-color: $my-black;
+  box-shadow: 0px 0px 10px $my-black;
 }
 
 .day-night-cont .the-moon {
@@ -138,9 +132,9 @@
   top: 10px;
   width: 20px;
   height: 20px;
-  background-color: #fff;
+  background-color: $my-white;
   border-radius: 50%;
-  border: 1px solid black;
+  border: 1px solid $my-black;
   clip-path: (50% 20%, 100% 50%, 50% 100%, 0% 50%);
 }
 .day-night-cont .the-moon::before {
@@ -160,7 +154,7 @@
   height: 20px;
   width: 20px;
   border-radius: 100%;
-  background: $my-black;
+  background-color: $my-black;
 }
 
 /* TOGGLE */
@@ -199,25 +193,25 @@ animation: moonUp 1.9s linear forwards ;
 /* NIGHT ANIMATION */
 
 .input-dayNight[type=checkbox]:checked ~ .c-window {
-  background: #222222;
+  background-color: #222222;
 }
 
 
 .input-dayNight[type=checkbox]:checked ~ .c-window .the-fox{
-  background: $my-orange;
+  background-color: $my-orange;
 }
 
 @keyframes sunUp {
   10% {
     transform: translateX(-15%) translateY(50px);
-    background: $sun-yellow; /* $sun-yellow replaced */
+    background-color: $sun-yellow; /* $sun-yellow replaced */
     box-shadow: 0px 0px 10px $sun-yellow-shadow; /* $sun-yellow-shadow replaced */
     opacity: 1;
   }
   100% {
     opacity: 0;
     transform: translateX(-15%) translateY(50px);
-    background: $sun-yellow; /* $sun-yellow replaced */
+    background-color: $sun-yellow; /* $sun-yellow replaced */
     box-shadow: 0px 0px 10px $sun-yellow-shadow; /* $sun-yellow-shadow replaced */
   }
 }
@@ -225,7 +219,7 @@ animation: moonUp 1.9s linear forwards ;
 @keyframes moonUp {
   10% {
     transform: translateX(-15%) translateY(50px);
-    background: #f4f3f0;
+    background-color: #f4f3f0;
     opacity: 1;
 
   }

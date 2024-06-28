@@ -16,6 +16,7 @@ export { default as ModeButtons } from "./profileComponent/modeButtons/ModeButto
 export { default as DayNightButton } from "./profileComponent/modeButtons/DayNightButton";
 export { default as GamerButton } from "./profileComponent/modeButtons/GamerButton";
 export { default as CartoonButton } from "./profileComponent/modeButtons/CartoonButton";
+export { default as LenguageButton } from "./profileComponent/modeButtons/LenguageButton";
 export { default as MyPicture } from "./profileComponent/myPicture/MyPicture";
 
 export { default as ListComments } from "./notes/note1/ListComments";
