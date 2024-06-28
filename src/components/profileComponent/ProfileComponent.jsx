@@ -21,7 +21,6 @@ function ProfileComponent() {
 
    {!normalCartoon &&   <MyPicture profPic1={profDraw1} profPic2={profDraw2} profPic3={profDraw3} profPic4={profDraw4} saturate={1}/>}
         <h3>fldaf</h3>
-        <p>Contenido adicional para probar el desplazamiento...</p>
     </div>
   );
 }

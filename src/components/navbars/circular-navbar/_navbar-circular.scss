@@ -110,29 +110,43 @@
 }
 
 .orb {
-    border-radius: 50%;
-    box-shadow:
-        // inset 20px 0 60px $my-orange,
-        // inset -20px 0 60px $blue,
-        // inset 20px 0 300px $my-orange,
-        // inset -20px 0 300px $blue,
-          // -10px 0 30px $my-orange,
-          // 10px 0 30px $blue;
-          10px;
+
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, $my-orange, $my-orange, $my-dark-orange);
+  box-shadow:
+    inset 20px 0 20px $my-orange,
+    inset -20px 0 20px $my-light-orange,
+    inset 20px 0 100px $my-dark-orange,
+    inset -20px 0 100px $my-orange,
+    -3px 0 3px $my-orange,
+    3px 0 3px $my-orange;
+  position: relative;
+}
+
+.orb::before {
+  content: '';
+  position: absolute;
+  top: 15%; /* Ajusta según tus necesidades */
+  left: 15%; /* Ajusta según tus necesidades */
+  width: 70%; /* Ajusta según tus necesidades */
+  height: 70%; /* Ajusta según tus necesidades */
+  border-radius: 50%;
+
 }
 .small-orb {
     border-radius: 50%;
+    background: radial-gradient(circle at 50% 50%, $my-orange, $my-orange, $my-dark-orange);
     box-shadow:
-        // inset 20px 0 60px $my-orange,
-        // inset -20px 0 60px $blue,
-        // inset 20px 0 300px $my-orange,
-        // inset -20px 0 300px $blue,
-        //       0px 0 5px $my-orange,
-        //       0px 0 5px $blue;
-        10px;
-}
+      inset 5px 0 5px $my-orange,
+      inset -5px 0 5px $my-orange,
+      inset 5px 0 5px $my-light-orange,
+      inset -5px 0 5px $my-light-orange,
+      -3px 0 3px $my-orange,
+      3px 0 3px $my-orange;
+    position: relative;
+  }
+  
 .circularNav-a:hover{
   scale: 1.2;
-  background-color: rgb(255, 201, 73);
   transition: 0.1s ease-in-out;
 }

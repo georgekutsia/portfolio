@@ -203,17 +203,30 @@ a {
 
 .orb {
   border-radius: 50%;
-  box-shadow: 10px;
+  background: radial-gradient(circle at 50% 50%, #C74628, #C74628, #9e3720);
+  box-shadow: inset 20px 0 20px #C74628, inset -20px 0 20px #e15030, inset 20px 0 100px #9e3720, inset -20px 0 100px #C74628, -3px 0 3px #C74628, 3px 0 3px #C74628;
+  position: relative;
+}
+
+.orb::before {
+  content: "";
+  position: absolute;
+  top: 15%; /* Ajusta según tus necesidades */
+  left: 15%; /* Ajusta según tus necesidades */
+  width: 70%; /* Ajusta según tus necesidades */
+  height: 70%; /* Ajusta según tus necesidades */
+  border-radius: 50%;
 }
 
 .small-orb {
   border-radius: 50%;
-  box-shadow: 10px;
+  background: radial-gradient(circle at 50% 50%, #C74628, #C74628, #9e3720);
+  box-shadow: inset 5px 0 5px #C74628, inset -5px 0 5px #C74628, inset 5px 0 5px #e15030, inset -5px 0 5px #e15030, -3px 0 3px #C74628, 3px 0 3px #C74628;
+  position: relative;
 }
 
 .circularNav-a:hover {
   scale: 1.2;
-  background-color: rgb(255, 201, 73);
   transition: 0.1s ease-in-out;
 }
 
@@ -1203,7 +1216,6 @@ a {
   width: 130px;
   height: 40px;
   margin: 20px;
-  color: #e5e5e2;
   border-radius: 5px;
   font-family: "Lato", sans-serif;
   font-weight: 200;
@@ -1407,10 +1419,6 @@ a {
   width: 50%;
 }
 
-.button2 span:hover {
-  color: #e5e5e2;
-}
-
 .button2 span:before,
 .button2 span:after {
   position: absolute;
@@ -1491,10 +1499,6 @@ a {
   width: 100%;
 }
 
-.button3 span:hover {
-  color: #e5e5e2;
-}
-
 .button3 span:before,
 .button3 span:after {
   position: absolute;
@@ -1572,10 +1576,6 @@ a {
 
 .button4:hover:after {
   width: 100%;
-}
-
-.button4 span:hover {
-  color: #e5e5e2;
 }
 
 .button4 span:before,
@@ -1753,15 +1753,15 @@ a {
 }
 
 .button8:hover {
-  color: #e5e5e2;
   border: none;
   background: transparent;
+  border-radius: 10px;
 }
 
 .button8:hover:after {
   background: linear-gradient(90deg, black 10%, rgb(246, 97, 28) 20%, rgb(246, 97, 28) 80%, black 90%);
   transform: scale(1);
-  border-radius: 50%;
+  border-radius: 30%;
 }
 
 /* button 9 */

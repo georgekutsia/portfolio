@@ -72,7 +72,6 @@ const handleButtons = ()=>{
           item7={"parachute-box"}
           item8={"crown"}
           item9={"gamepad"}
-          backColor={"rgb(216, 101, 0)"}
           aosDelay={"100"}
         />
         <CircularNavbar
@@ -87,7 +86,6 @@ const handleButtons = ()=>{
           item7={"infinity"}
           item8={"crown"}
           item9={"globe"}
-          backColor={"rgb(216, 101, 0)"}
           aosDelay={"200"}
 
         />
@@ -107,7 +105,6 @@ const handleButtons = ()=>{
           item7={"globe"}
           item8={"crown"}
           item9={"toolbox"}
-          backColor={"rgb(216, 101, 0)"}
           aosDelay={"300"}
 
         />
@@ -125,7 +122,6 @@ const handleButtons = ()=>{
           item7={"globe"}
           item8={"rainbow"}
           item9={"face-grin-beam"}
-          backColor={"rgb(216, 101, 0)"}
           aosDelay={"400"}
 
         />

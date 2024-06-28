@@ -146,15 +146,15 @@
   transform: scale(.1);
 }
 .button8:hover {
-  color: $my-white;
   border: none;
   background: transparent;
+  border-radius: 10px;
 }
 .button8:hover:after {
   background: linear-gradient(90deg, black 10%, rgb(246, 97, 28) 20%,  rgb(246, 97, 28) 80%, black 90%);
   -webkit-transform: scale(1);
   transform: scale(1);
-  border-radius: 50%;
+  border-radius: 30%;
 }
 /* button 9 */
 .button9 {
