@@ -32,7 +32,7 @@ function App() {
   return (
     <PrimeReactProvider>
       <GlobalContext.Provider value={{ favorites, setFavorites, modeDarkLight, setModeDarkLight, handleChangeDarkLight, darkLightText, spa, eng, ger, language, setLanguage, normalCartoon, setNormalCartoon}}>
-        <div >
+        <div>
           <ModeButtons/>
           <CornerNavbar />
           <Routers />
