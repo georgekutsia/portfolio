@@ -307,7 +307,7 @@ a {
   color: rgb(0, 0, 0);
   z-index: 50;
   top: 0;
-  left: calc(10px + 13vw);
+  left: calc(10px + 15vw);
 }
 
 .cornerNavbar-navbar-mainNavbar {
@@ -585,14 +585,15 @@ a {
 
 .profile {
   color: white;
-  margin: 10vw;
+  margin: 0vw 3vw;
+  padding-top: 50px;
 }
 
 .modeBtns {
   display: flex;
   gap: 0.5vw;
   position: absolute;
-  right: calc(100px + 10vw);
+  right: calc(10px + 15vw);
   top: 0;
   margin-top: 30px;
   padding-right: 80px;
@@ -1160,6 +1161,7 @@ a {
   width: calc(100px + 12vw);
   height: calc(70px + 12vw);
   margin-top: 100px;
+  margin-left: 200px;
   border: 2px solid transparent;
   overflow: visible;
   border-top-right-radius: 20px;
@@ -1825,6 +1827,7 @@ a {
 }
 
 .game-screen-box {
+  margin-top: 5vw;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
@@ -1985,7 +1988,7 @@ body {
 
 @media only screen and (min-width: 600px) {
   body {
-    margin: 20px calc(10px + 10vw);
+    margin: 20px calc(10px + 16vw);
   }
 }
 .dark-text {

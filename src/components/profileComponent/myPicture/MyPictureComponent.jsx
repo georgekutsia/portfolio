@@ -18,12 +18,20 @@ function MyPictureComponent({ profPic1, profPic2, profPic3, profPic4, saturate }
 
       if (window.scrollY >= 0 && window.scrollY <= 149) {
         newImageSrc = profPic1;
+        pictureRef.current.style.marginLeft = "200px";
+        pictureRef.current.style.marginTop = "5vw";
+
       } else if (window.scrollY >= 150 && window.scrollY <= 299) {
         newImageSrc = profPic2;
+        pictureRef.current.style.marginLeft = "2px";
+        pictureRef.current.style.marginTop = "15vw";
+
       } else if (window.scrollY >= 300 && window.scrollY <= 449) {
         if (pictureRef.current) {
           // pictureRef.current.style.marginLeft = "300px";
         }
+        pictureRef.current.style.marginLeft = "2px";
+
         if (heyhowRef.current) { // Add this block to handle the heyhow class element
         }
         newImageSrc = profPic3;
