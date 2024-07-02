@@ -50,16 +50,16 @@
 body {
   display:grid;
   height:100vh;
-  margin: 200px;
+  margin: 20px calc(10px + 16vw);
   background-color: $my-black;
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
   body {
-    margin: 20px calc(10px + 16vw);
+    margin: 100px  10px;
+    background-color: blue;
   }
 }
-
 .dark-text{
   color: red;
 }

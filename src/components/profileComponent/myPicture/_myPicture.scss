@@ -7,6 +7,7 @@
     position: sticky;
     top: 0;
     overflow: hidden; 
+    background-color: yellow;
   }
 
   &-picture {
@@ -14,9 +15,8 @@
     justify-content: center;
     align-items: center;
     width: calc(100px + 12vw);
-    height: calc(70px + 12vw);
-    margin-top: 100px;
-    margin-left: 200px;
+    margin-top: 5vw;
+    margin-left: 1vw;
     border: 2px solid transparent;
     overflow: visible; 
     border-top-right-radius: 20px;
@@ -32,7 +32,7 @@
       top: 0; /* Eliminado top y left */
       left: 0;
       z-index: 2; 
-      margin-top: -40px;
+      margin-top: -30px;
     }
 
     &::before,
@@ -40,8 +40,8 @@
       content: '';
       position: absolute;
       width: 70%;
-      height: 2px;
-      background-color: $my-blue;
+      height: 4px;
+      background-color: $my-orange;
       transform: scaleX(0);
       transition: transform 1s ease-in-out;
     }
