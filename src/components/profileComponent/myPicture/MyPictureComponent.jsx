@@ -18,7 +18,7 @@ function MyPictureComponent({ profPic1, profPic2, profPic3, profPic4, saturate }
 
       if (window.scrollY >= 0 && window.scrollY <= 149) {
         newImageSrc = profPic1;
-        pictureRef.current.style.marginLeft = "200px";
+        pictureRef.current.style.marginLeft = "30%";
         pictureRef.current.style.marginTop = "5vw";
 
       } else if (window.scrollY >= 150 && window.scrollY <= 299) {
@@ -85,7 +85,7 @@ function MyPictureComponent({ profPic1, profPic2, profPic3, profPic4, saturate }
           <img style={{ filter: `saturate(${saturate})` }} src={imageSrc} alt="pic1" className={`profile-component-picture-img ${fadeClass}`} />
         </div>
       </div>
-      <h1 ref={heyhowRef} style={{ color: `${darkLightText}` }}>{text}</h1> {/* Add ref to the heyhow class element */}
+      {/* <h1 ref={heyhowRef} style={{ color: `${darkLightText}` }}>{text}</h1> */}
     </div>
   );
 }

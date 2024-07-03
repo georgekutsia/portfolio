@@ -7,7 +7,6 @@
     position: sticky;
     top: 0;
     overflow: hidden; 
-    background-color: yellow;
   }
 
   &-picture {
@@ -16,7 +15,7 @@
     align-items: center;
     width: calc(100px + 12vw);
     margin-top: 5vw;
-    margin-left: 1vw;
+    margin-left: 30%;
     border: 2px solid transparent;
     overflow: visible; 
     border-top-right-radius: 20px;
@@ -40,7 +39,7 @@
       content: '';
       position: absolute;
       width: 70%;
-      height: 4px;
+      height: 2px;
       background-color: $my-orange;
       transform: scaleX(0);
       transition: transform 1s ease-in-out;
