@@ -1148,7 +1148,7 @@ a {
   position: absolute;
   display: flex;
   gap: 3vw;
-  margin-top: 500px;
+  margin-top: calc(250px + 20vw);
   transition: 0.5s ease-in-out all;
   flex-wrap: wrap;
 }
@@ -1158,8 +1158,8 @@ a {
   background-color: rgb(49, 24, 24);
   border: 2px solid white;
   border-radius: 10%;
-  width: 300px;
-  height: 300px;
+  width: calc(40px + 20vw);
+  height: calc(40px + 20vw);
   overflow: hidden;
   position: relative;
 }
