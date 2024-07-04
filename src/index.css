@@ -1161,6 +1161,7 @@ a {
   width: 300px;
   height: 300px;
   overflow: hidden;
+  position: relative;
 }
 .project-header {
   display: flex;
@@ -1180,10 +1181,9 @@ a {
 }
 .project-footer {
   position: absolute;
+  bottom: 10px;
   display: flex;
-  top: 240px;
-  gap: 10px;
-  margin-left: 10px;
+  gap: 5px;
 }
 .project-footer-img {
   border-radius: 30%;
