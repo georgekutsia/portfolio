@@ -1,6 +1,5 @@
 import React, { useContext, useEffect, useRef, useState } from 'react';
 import { GlobalContext } from '../../../App';
-import Form from 'react-bootstrap/Form';
 
 function MyPictureComponent({ profPic1, profPic2, profPic3, profPic4, saturate }) {
   const { darkLightText, language } = useContext(GlobalContext);
@@ -16,17 +15,17 @@ function MyPictureComponent({ profPic1, profPic2, profPic3, profPic4, saturate }
       setScrollY(window.scrollY);
       let newImageSrc = imageSrc;
 
-      if (window.scrollY >= 0 && window.scrollY <= 149) {
+      if (window.scrollY >= 0 && window.scrollY <= 249) {
         newImageSrc = profPic1;
         pictureRef.current.style.marginLeft = "30%";
         pictureRef.current.style.marginTop = "5vw";
 
-      } else if (window.scrollY >= 150 && window.scrollY <= 299) {
+      } else if (window.scrollY >= 250 && window.scrollY <= 499) {
         newImageSrc = profPic2;
         pictureRef.current.style.marginLeft = "2px";
         pictureRef.current.style.marginTop = "15vw";
 
-      } else if (window.scrollY >= 300 && window.scrollY <= 449) {
+      } else if (window.scrollY >= 500 && window.scrollY <= 749) {
         if (pictureRef.current) {
           // pictureRef.current.style.marginLeft = "300px";
         }

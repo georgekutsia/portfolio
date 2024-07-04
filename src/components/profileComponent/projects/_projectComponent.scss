@@ -1,9 +1,10 @@
 .projects{
   position: absolute;
   display: flex;
-  gap: 5vw;
-  margin-top: 30vw;
+  gap: 3vw;
+  margin-top: 500px;
   transition: 0.5s ease-in-out all;
+  flex-wrap: wrap;
 }
 .project{
   z-index: 4;

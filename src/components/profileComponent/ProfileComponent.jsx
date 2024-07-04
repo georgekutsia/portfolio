@@ -55,6 +55,9 @@ function ProfileComponent() {
       <section ref={projectsRef} className='projects'>
         <ProjectComponent nombreProyecto={"Bulala"} projectImg={projectImg1}  programsUsed={programsUsed1} />
         <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg2}  programsUsed={programsUsed2} />
+        <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg2}  programsUsed={programsUsed2} />
+        <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg2}  programsUsed={programsUsed2} />
+        <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg2}  programsUsed={programsUsed2} />
       </section>
       {normalCartoon && <MyPictureComponent profPic1={profPic1} profPic2={profPic2} profPic3={profPic3} profPic4={profPic4} saturate={2.4} />}
       {!normalCartoon && <MyPictureComponent profPic1={profDraw1} profPic2={profDraw2} profPic3={profDraw3} profPic4={profDraw4} saturate={1} />}
