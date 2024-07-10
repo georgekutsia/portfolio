@@ -1156,12 +1156,17 @@ a {
 .project {
   z-index: 4;
   background-color: rgb(49, 24, 24);
-  border: 2px solid white;
   border-radius: 10%;
-  width: calc(40px + 20vw);
-  height: calc(40px + 20vw);
+  width: 20vw;
+  height: 20vw;
+  min-width: 100px;
   overflow: hidden;
   position: relative;
+  transition: 0.3s ease-in-out all;
+}
+.project-img:hover {
+  opacity: 0.5;
+  transition: 0.3s ease-in-out all;
 }
 .project-header {
   display: flex;
@@ -1179,6 +1184,15 @@ a {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.project-img::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  background: inherit;
+  filter: blur(15px) contrast(200%);
+}
 .project-footer {
   position: absolute;
   bottom: 10px;
@@ -1192,10 +1206,29 @@ a {
   padding: 3px;
   height: 35px;
 }
-
-.project:hover {
-  opacity: 0.5;
-  transition: 0.3s ease-in-out all;
+.project-additional-info {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 5;
+  display: none;
+}
+.project-additional-play {
+  margin-left: 40%;
+  font-size: 2.5rem;
+  color: rgb(5, 133, 218);
+}
+.project-additional-play:hover {
+  transition: 0.5s ease-in-out all;
+  border-radius: 20%;
+}
+.project:hover .project-additional-info {
+  display: block;
 }
 
 .profile-component {
@@ -1231,6 +1264,7 @@ a {
   left: 0;
   z-index: 2;
   margin-top: -30px;
+  transition: 1s ease-in-out;
 }
 .profile-component-picture::before, .profile-component-picture::after {
   content: "";
@@ -1266,6 +1300,31 @@ a {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.images1-component {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20vw, 1fr));
+  gap: 40px;
+  width: 100%;
+  margin: 0 auto;
+}
+.images1-component-1 {
+  background-size: cover;
+  position: relative;
+  border-radius: 4px;
+  width: 100%;
+  height: 10vw;
+}
+.images1-component-1::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  inset: 0;
+  position: absolute;
+  background: inherit;
+  filter: blur(15px) contrast(200%);
+  z-index: -1;
 }
 
 .custom-btn1 {
@@ -1885,6 +1944,22 @@ a {
   justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: transparent;
+}
+.game-screen-box-buttonHide {
+  height: 45px;
+  width: auto;
+  margin: 30px 0px 0px 10px;
+  border-radius: 50%;
+  padding: 10px 13px;
+  border-color: rgb(5, 133, 218);
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 40px 40px rgb(5, 133, 218) inset, 0 0 0 0 rgb(5, 133, 218);
+  transition: all 150ms ease-in-out;
+}
+.game-screen-box-buttonHide:hover {
+  box-shadow: 0 0 10px 0 rgb(5, 133, 218) inset, 0 0 10px 4px rgb(5, 133, 218);
+  background-color: black;
+  color: rgb(5, 133, 218);
 }
 
 .rickandmorty-box {

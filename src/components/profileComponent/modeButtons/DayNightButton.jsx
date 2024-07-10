@@ -6,7 +6,7 @@ import Tooltip from 'react-bootstrap/Tooltip';
 function DayNightButton() {
   const {handleChangeDarkLight } = useContext(GlobalContext);
   return (
-      <div className="the-container">
+      <div className="the-container"  data-aos="zoom-in" >
         <input className="input-dayNight" type="checkbox" id="toggle" onChange={handleChangeDarkLight} />
         <OverlayTrigger placement="left" overlay={
             <Tooltip id="tooltip-bottom">

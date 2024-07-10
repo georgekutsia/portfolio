@@ -10,7 +10,7 @@ function LenguageButton() {
   };
 
   return (
-    <Form.Select size="sm" onChange={handleChangeLang}>
+    <Form.Select data-aos="zoom-in" data-aos-delay="150" size="sm" onChange={handleChangeLang}>
       <option value={spa}>Español</option>
       <option value={eng}>Inglés</option>
       <option value={ger}>Alemán</option>

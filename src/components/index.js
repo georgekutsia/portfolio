@@ -4,6 +4,9 @@ export { default as CircularNavbar } from "./navbars/circular-navbar/CircularNav
 export { default as AllNavbars } from "./navbars/AllNavbars";
 export { default as MainFooter } from "./footers/mainfooter/_main-footer";
 export { default as CloseAllComponent } from "./close/CloseAllComponent";
+export { default as ImagesComp } from "./images/ImagesComp.jsx";
+export { default as Images1 } from "./images/images1/Images1.jsx";
+
 export { default as Buttons } from "./buttons/Buttons";
 export { default as Button1 } from "./buttons/button/Button1";
 export { default as Button2 } from "./buttons/button/Button2";

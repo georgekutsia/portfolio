@@ -1,18 +1,45 @@
-import React, { useState } from 'react'
-import { CalculatorBody, CircularNavbar, Gallery1, Cart1, Colores, ColoresNombrados, Memory, Buttons } from "../../components";
+import React, { useContext, useEffect, useState } from 'react'
+import { CalculatorBody, CircularNavbar, Gallery1, Cart1, Colores, ColoresNombrados, Memory, Buttons, ImagesComp} from "../../components";
 import Libreria1 from '../../components/librerias/Libreria1';
 import List from '../../components/notes/note1/List';
+import { div } from 'three/examples/jsm/nodes/Nodes.js';
+import { GlobalContext } from '../../App';
 
 function ComponentsScreens() {
+  const [showNavbars, setShowNavbars] = useState(true)
+  const { darkLightText, language } = useContext(GlobalContext);
+  const [text, setText] = useState("Ocultar"); // Set initial text to Spanish
+
 const [calculator, setCalculator] = useState(false)
 const [gallery1, setGallery1] = useState(false)
 const [libreria1, setLibreria1] = useState(false)
 const [colores, setColores] = useState(false)
 const [list, setList] = useState(false)
 const [buttons, setButtons] = useState(true)
+const [images, setImages] = useState(true)
 
 const [coloresNombrados, setColoresNombrados] = useState(false)
 const [memory, setMemory] = useState(false)
+
+useEffect(() => {
+  let newText;
+  switch (language) {
+    case "esp":
+      newText = "Ocultar";
+      break;
+    case "eng":
+      newText = "Hide";
+      break;
+    case "ger":
+      newText = "Verkleidung";
+      break;
+    default:
+      newText = "Ocultar"; // Default to Spanish
+  }
+  setText(newText);
+}, [language]); 
+
+
   const products = [
     {
       name: "Remmant 2",
@@ -57,10 +84,16 @@ const handleList = ()=>{
 const handleButtons = ()=>{
   setButtons(!buttons)
 }
+const handleImages = ()=>{
+  setImages(!images)
+}
 
   return (
     <>
       <div className="game-screen-box">
+    <button className='game-screen-box-buttonHide' onClick={()=> {setShowNavbars(!showNavbars)}}> {showNavbars ? <i class="fa-solid fa-circle-minus"></i> : <i class="fa-solid fa-circle-plus"></i>}</button>
+    {showNavbars && 
+    <>
         <CircularNavbar
           text={"juegos"}
           item1={"calculator"}
@@ -96,12 +129,13 @@ const handleButtons = ()=>{
           handleLibreria1={handleLibreria1}
           handleList1={handleList}
           handleButtons1={handleButtons}
+          handleImages1={handleImages}
           item1={"calculator"}
           item2={"palette"}
           item3={"calendar"}
           item4={"bomb"}
           item5={"toggle-on"}
-          item6={"gears"}
+          item6={"images"}
           item7={"globe"}
           item8={"crown"}
           item9={"toolbox"}
@@ -123,8 +157,9 @@ const handleButtons = ()=>{
           item8={"rainbow"}
           item9={"face-grin-beam"}
           aosDelay={"400"}
-
         />
+    </>
+    }
       </div>
       <div>
         {calculator && (
@@ -179,6 +214,11 @@ const handleButtons = ()=>{
       <div>
         {buttons && 
           <Buttons closeComponent={handleButtons}/>
+        }
+      </div>
+      <div>
+        {images && 
+        <ImagesComp/>
         }
       </div>
     </>

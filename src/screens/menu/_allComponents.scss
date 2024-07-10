@@ -10,4 +10,20 @@
   justify-content: space-evenly;
   flex-wrap: wrap;
   background-color: transparent;
+  &-buttonHide{
+    height: 45px;
+    width: auto;
+    margin: 30px 0px 0px 10px;
+    border-radius: 50% ;
+    padding: 10px 13px;
+    border-color: $my-blue;
+    color: $my-black;
+    box-shadow: 0 0 40px 40px $my-blue inset, 0 0 0 0 $my-blue;
+    transition: all 150ms ease-in-out;
+      &:hover {
+        box-shadow: 0 0 10px 0 $my-blue inset, 0 0 10px 4px $my-blue;
+        background-color: black;
+        color: $my-blue;
+    }
+  }
 }

@@ -10,14 +10,14 @@ function ProfileComponent() {
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
-      if (window.scrollY >= 0 && window.scrollY <= 149) {
+      if (window.scrollY >= 0 && window.scrollY <= 249) {
         projectsRef.current.style.marginLeft = "0%";
 
-      } else if (window.scrollY >= 150 && window.scrollY <= 299) {
-        projectsRef.current.style.marginLeft = "30%";
-      } else if (window.scrollY >= 300 && window.scrollY <= 449) {
+      } else if (window.scrollY >= 250&& window.scrollY <= 499) {
+        projectsRef.current.style.marginLeft = "25%";
+      } else if (window.scrollY >= 500 && window.scrollY <= 749) {
 
-      } else if (window.scrollY >= 450) {
+      } else if (window.scrollY >= 850) {
         if (projectsRef.current) {
           // pictureRef.current.style.marginLeft = "0px";
         }
@@ -57,10 +57,24 @@ function ProfileComponent() {
         <ProjectComponent nombreProyecto={"Bulala"} projectImg={projectImg1}  programsUsed={programsUsed1} />
         <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg2}  programsUsed={programsUsed2} />
         <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg3}  programsUsed={programsUsed2} />
+        <ProjectComponent nombreProyecto={"Bulala"} projectImg={projectImg1}  programsUsed={programsUsed1} />
+        <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg2}  programsUsed={programsUsed2} />
+        <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg3}  programsUsed={programsUsed2} />
+        <ProjectComponent nombreProyecto={"Bulala"} projectImg={projectImg1}  programsUsed={programsUsed1} />
+        <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg2}  programsUsed={programsUsed2} />
+        <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg3}  programsUsed={programsUsed2} />
+        <ProjectComponent nombreProyecto={"Bulala"} projectImg={projectImg1}  programsUsed={programsUsed1} />
+        <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg2}  programsUsed={programsUsed2} />
+        <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg3}  programsUsed={programsUsed2} />
+        <ProjectComponent nombreProyecto={"Bulala"} projectImg={projectImg1}  programsUsed={programsUsed1} />
+        <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg2}  programsUsed={programsUsed2} />
+        <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg3}  programsUsed={programsUsed2} />
+        <ProjectComponent nombreProyecto={"Bulala"} projectImg={projectImg1}  programsUsed={programsUsed1} />
+        <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg2}  programsUsed={programsUsed2} />
+        <ProjectComponent nombreProyecto={"Cacafuti"} projectImg={projectImg3}  programsUsed={programsUsed2} />
       </section>
       {normalCartoon && <MyPictureComponent profPic1={profPic1} profPic2={profPic2} profPic3={profPic3} profPic4={profPic4} saturate={2.4} />}
       {!normalCartoon && <MyPictureComponent profPic1={profDraw1} profPic2={profDraw2} profPic3={profDraw3} profPic4={profDraw4} saturate={1} />}
-      <h3>fldaf</h3>
     </div>
   );
 }

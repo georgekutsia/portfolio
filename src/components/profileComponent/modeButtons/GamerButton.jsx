@@ -8,7 +8,7 @@ function GamerButton() {
 
   return (
     <>
-      <div className="the-container-gamer">
+      <div className="the-container-gamer"  data-aos="zoom-in" data-aos-delay="50">
         <input className="input-dayNight-gamer" type="checkbox" id="toggle-gamer"  />
         
         <OverlayTrigger placement="bottom" overlay={

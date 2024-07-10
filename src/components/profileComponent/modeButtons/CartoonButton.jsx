@@ -6,7 +6,7 @@ import Tooltip from 'react-bootstrap/Tooltip';
 function CartoonButton() {
   const {normalCartoon, setNormalCartoon } = useContext(GlobalContext);
   return (
-      <div className="the-container-cartoon">
+      <div className="the-container-cartoon"  data-aos="zoom-in" data-aos-delay="100">
         <input onClick={()=> setNormalCartoon(!normalCartoon)} className="input-dayNight-cartoon" type="checkbox" id="toggle-cartoon"  />
         <OverlayTrigger placement="right" overlay={
             <Tooltip id="tooltip-bottom">
