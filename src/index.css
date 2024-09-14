@@ -230,13 +230,29 @@ a {
   transition: 0.1s ease-in-out;
 }
 
-.libreria1 {
-  background-color: rgb(129, 129, 247);
-  width: 100%;
-  padding: 10px;
-  margin: 30px;
-  border-radius: 10px;
-  text-align: center;
+.methods {
+  width: 90%;
+  background-color: rgb(12, 12, 46);
+  color: white;
+}
+
+.methodComponent {
+  margin: 40px 0px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+.methodComponent-span {
+  margin-left: 2rem;
+}
+.methodComponent button {
+  padding: 1px 5px;
+}
+.methodComponent-navLinkMdm {
+  color: rgb(51, 191, 246);
+}
+.methodComponent-navLinkMdm-span {
+  color: #C74628;
 }
 
 .note1 {
@@ -1315,6 +1331,8 @@ a {
   border-radius: 4px;
   width: 100%;
   height: 10vw;
+  margin-top: 20px;
+  transition: 0.5s ease-in-out;
 }
 .images1-component-1::after {
   content: "";
@@ -1325,6 +1343,60 @@ a {
   background: inherit;
   filter: blur(15px) contrast(200%);
   z-index: -1;
+  transition: 0.5s ease-in-out;
+}
+.images1-component-1:hover::after {
+  filter: blur(35px) contrast(200%);
+}
+
+.atropos-inner img {
+  width: 320px;
+  height: 160px;
+}
+
+.containerRotate {
+  position: relative;
+  width: 320px;
+  height: 160px;
+  perspective: 1000px; /* Añade perspectiva para el efecto 3D */
+}
+
+.imageRotate {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.left-half,
+.right-half {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+}
+
+.left-half {
+  left: 0;
+}
+
+.right-half {
+  right: 0;
+}
+
+.left-half:hover ~ .imageRotate {
+  transform: rotateY(-20deg);
+}
+
+.right-half:hover ~ .imageRotate {
+  transform: rotateY(20deg);
+}
+
+.imgNameComp {
+  color: white;
+  font-size: calc(20px + 2vw);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 30px;
 }
 
 .custom-btn1 {

@@ -1,0 +1,26 @@
+.methods{
+  width: 90%;
+  background-color: rgb(12, 12, 46);
+  color: white;
+
+}
+
+.methodComponent{
+  margin: 40px 0px ;
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  &-span{
+    margin-left: 2rem
+  }
+  button{
+    padding: 1px 5px;
+  }
+
+  &-navLinkMdm{
+    color: rgb(51, 191, 246);
+    &-span{
+      color: $my-orange;
+    }
+  }
+}

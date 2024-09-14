@@ -8,7 +8,7 @@ function CloseAllComponent({ setComponent }) {
   };
 
   return (
-      <i        onClick={setComponent}
+      <i  onClick={setComponent}
       onMouseEnter={handleHover}
       onMouseLeave={handleHover} 
       className={`close-all-components  ${isHovered ? "fa-solid fa-circle-xmark fa-spin":"fa-regular fa-circle-xmark"}`}></i>

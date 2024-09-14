@@ -11,6 +11,9 @@
     border-radius: 4px;
     width: 100%;
     height: 10vw;
+    margin-top: 20px;
+    transition: 0.5s ease-in-out;;
+
   }
   
   &-1::after {
@@ -22,6 +25,65 @@
     background: inherit;
     filter: blur(15px) contrast(200%);
     z-index: -1;
+    transition: 0.5s ease-in-out;;
   }
-  
+  &-1:hover::after {
+    filter: blur(35px) contrast(200%);
+  }
+
+}
+
+
+
+
+
+.atropos-inner img {
+  width: 320px;
+  height: 160px;
+}
+
+.containerRotate {
+  position: relative;
+  width: 320px;
+  height: 160px;
+  perspective: 1000px; /* Añade perspectiva para el efecto 3D */
+}
+
+.imageRotate {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.left-half,
+.right-half {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height: 100%;
+  z-index: 10;
+}
+
+.left-half {
+  left: 0;
+}
+
+.right-half {
+  right: 0;
+}
+
+.left-half:hover ~ .imageRotate {
+  transform: rotateY(-20deg);
+}
+
+.right-half:hover ~ .imageRotate {
+  transform: rotateY(20deg);
+}
+
+
+.imgNameComp{
+  color: white;
+  font-size: calc(20px + 2vw);
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 30px;
 }

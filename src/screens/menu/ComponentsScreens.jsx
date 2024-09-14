@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { CalculatorBody, CircularNavbar, Gallery1, Cart1, Colores, ColoresNombrados, Memory, Buttons, ImagesComp} from "../../components";
-import Libreria1 from '../../components/librerias/Libreria1';
+import Methods from '../../components/methods/Methods';
 import List from '../../components/notes/note1/List';
 import { div } from 'three/examples/jsm/nodes/Nodes.js';
 import { GlobalContext } from '../../App';
@@ -12,11 +12,11 @@ function ComponentsScreens() {
 
 const [calculator, setCalculator] = useState(false)
 const [gallery1, setGallery1] = useState(false)
-const [libreria1, setLibreria1] = useState(false)
+const [methods, setMethods] = useState(true)
 const [colores, setColores] = useState(false)
 const [list, setList] = useState(false)
-const [buttons, setButtons] = useState(true)
-const [images, setImages] = useState(true)
+const [buttons, setButtons] = useState(false)
+const [images, setImages] = useState(false)
 
 const [coloresNombrados, setColoresNombrados] = useState(false)
 const [memory, setMemory] = useState(false)
@@ -66,8 +66,8 @@ const handleCalculator = ()=>{
 const handleGallery1 = ()=>{
   setGallery1(!gallery1)
 }
-const handleLibreria1 = ()=>{
-  setLibreria1(!libreria1)
+const handleMethods = ()=>{
+  setMethods(!methods)
 }
 const handleColores = ()=>{
   setColores(!colores)
@@ -91,9 +91,10 @@ const handleImages = ()=>{
   return (
     <>
       <div className="game-screen-box">
-    <button className='game-screen-box-buttonHide' onClick={()=> {setShowNavbars(!showNavbars)}}> {showNavbars ? <i class="fa-solid fa-circle-minus"></i> : <i class="fa-solid fa-circle-plus"></i>}</button>
+    <button className='game-screen-box-buttonHide' onClick={()=> {setShowNavbars(!showNavbars)}}> {showNavbars ? <i className="fa-solid fa-circle-minus"></i> : <i className="fa-solid fa-circle-plus"></i>}</button>
     {showNavbars && 
     <>
+    {/* 1 */}
         <CircularNavbar
           text={"juegos"}
           item1={"calculator"}
@@ -107,6 +108,7 @@ const handleImages = ()=>{
           item9={"gamepad"}
           aosDelay={"100"}
         />
+        {/* 2 */}
         <CircularNavbar
           text={"páginas"}
           href1={"https://guide-dongions.netlify.app/"}
@@ -122,17 +124,18 @@ const handleImages = ()=>{
           aosDelay={"200"}
 
         />
-        <CircularNavbar
+        {/* 3 */}
+        <CircularNavbar 
           text={"Peaces"}
           handleGallery1={handleGallery1}
           handleCalculator={handleCalculator}
-          handleLibreria1={handleLibreria1}
+          handleMethods={handleMethods}
           handleList1={handleList}
           handleButtons1={handleButtons}
           handleImages1={handleImages}
           item1={"calculator"}
           item2={"palette"}
-          item3={"calendar"}
+          item3={"bezier-curve"}
           item4={"bomb"}
           item5={"toggle-on"}
           item6={"images"}
@@ -142,6 +145,7 @@ const handleImages = ()=>{
           aosDelay={"300"}
 
         />
+        {/* 4 */}
         <CircularNavbar
           text={"Oscar"}
           handle8={handleColores}
@@ -177,9 +181,9 @@ const handleImages = ()=>{
         )}
       </div>
       <div>
-        {libreria1 && (
+        {methods && (
           <div className="calculatorScreen">
-            <Libreria1 closeComponent={setLibreria1}/>
+            <Methods closeComponent={handleMethods}/>
           </div>
         )}
       </div>
@@ -218,7 +222,7 @@ const handleImages = ()=>{
       </div>
       <div>
         {images && 
-        <ImagesComp/>
+        <ImagesComp closeComponent={handleImages}/>
         }
       </div>
     </>

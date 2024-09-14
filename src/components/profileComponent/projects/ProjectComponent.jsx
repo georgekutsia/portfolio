@@ -31,7 +31,7 @@ function ProjectComponent({nombreProyecto, programsUsed, projectImg, aditionalIn
           <img key={index} src={image} alt="img" className='project-footer-img'/>
         ))}
       </footer>
-    </div>
+      </div>
   );
 }
 
