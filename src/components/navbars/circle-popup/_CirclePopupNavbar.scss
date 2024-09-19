@@ -1,0 +1,209 @@
+
+
+
+.circle-popup-nav-11bar{
+  color: white;
+}
+
+.nav-11 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 200px;
+  border-radius: 15px;
+  background-color: var(--my-grey);
+  height: 40px;
+}
+
+.nav-11 [type="checkbox"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.nav-11 [type="checkbox"] + label {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
+  background: var(--my-lightLightBlue);
+  border-radius: 50%;
+  transform: translate(20%, -50%);
+  transition: all 0.2s;
+  overflow: hidden;
+}
+
+/* Primer cuarto del círculo (arriba a la izquierda) */
+.nav-11 [type="checkbox"] + label::before {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  left: 0;
+  background-color: var(--my-lightlightblue);
+  border-top-left-radius: 100%;
+  transition: all 0.2s;
+}
+
+/* Segundo cuarto del círculo (arriba a la derecha) */
+.nav-11 [type="checkbox"] + label::after {
+  content: '';
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 0;
+  right: 0;
+  background-color: var(--my-lightlightgreen);
+  border-top-right-radius: 100%;
+  transition: all 0.2s;
+}
+
+/* Cuarto inferior izquierdo (marrón) */
+.nav-11 [type="checkbox"] + label .bottom-left {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  bottom: 0;
+  left: 0;
+  background-color: var(--my-lightlightyellow);
+  border-bottom-left-radius: 100%;
+  transition: all 0.2s;
+}
+
+/* Cuarto inferior derecho (var(--my-lightlightviolet)a) */
+.nav-11 [type="checkbox"] + label .bottom-right {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  bottom: 0;
+  right: 0;
+  background-color: var(--my-lightlightviolet);
+  border-bottom-right-radius: 100%;
+  transition: all 0.2s;
+}
+
+.nav-11 [type="checkbox"] + label:hover {
+  background: var(--my-lightBlue);
+}
+
+/* Cambios cuando el checkbox está marcado */
+.nav-11 input:checked + label {
+  background: var(--my-lightBlue);
+  transform: translate(20%, -60%);
+}
+
+.nav-11 input:checked + label .bottom-right,
+.nav-11 input:checked + label .bottom-left,
+.nav-11 input:checked + label::before,
+.nav-11 input:checked + label::after {
+  background-color: transparent;
+}
+
+
+
+
+
+.circle-popbar-menu li {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s;
+}
+
+.circle-popbar-menu li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.circle-popbar-menu li:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.circle-popbar-menu li:nth-child(3) {
+  transition-delay: 0.1s;
+}
+
+.circle-popbar-menu li:nth-child(4) {
+  transition-delay: 0.05s;
+}
+
+.circle-popbar-menu li a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--my-lightBlue);
+  color:  var(--my-black);
+
+}
+
+.circle-popbar-menu li a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(calc(100% + 20px));
+  width: 100%;
+  font-size: 16px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: var(--my-white);
+  font-weight: bold;
+  
+}
+
+.nav-11 input:checked ~ .circle-popbar-menu li:nth-child(1) {
+  bottom: -210px;
+  transition-delay: 0.1s;
+
+}
+
+.nav-11 input:checked ~ .circle-popbar-menu li:nth-child(2) {
+  bottom: -160px;
+  left: calc(50% - 75px);
+  transition-delay: 0.2s;
+}
+
+.nav-11 input:checked ~ .circle-popbar-menu li:nth-child(3) {
+  bottom: -160px;
+  left: calc(50% + 75px);
+  transition-delay: 0.3s;
+}
+
+.nav-11 input:checked ~ .circle-popbar-menu li:nth-child(4) {
+  bottom: -110px;
+  transition-delay: 0.4s;
+}
+
+.nav-11 input:checked ~ .circle-popbar-menu li a span {
+  opacity: 1;
+  transition-delay: 0.9s;
+}
+
+.nav-11 input:checked ~ .circle-popbar-menu li:nth-child(1) a  {
+  background-color: var(--my-lightlightyellow);
+}
+.nav-11 input:checked ~ .circle-popbar-menu li:nth-child(2) a  {
+  background-color: var(--my-lightlightblue);
+}
+.nav-11 input:checked ~ .circle-popbar-menu li:nth-child(3) a  {
+  background-color: var(--my-lightlightviolet);
+}
+.nav-11 input:checked ~ .circle-popbar-menu li:nth-child(4) a  {
+  background-color: var(--my-lightlightgreen);
+}
+
+.circle-popbar-menu-h5{
+    text-shadow: 1px 1px black;
+    z-index: 2;
+    color: white;
+    font-weight: 900;
+}

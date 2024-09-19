@@ -8,18 +8,18 @@
 @import "../src/components/notes/note1/note1.scss";
 @import "../src/components/navbars/all-navbars";
 @import "../src/components/navbars/main-navbar/corner-navbar";
+@import "../src/components/navbars/circle-popup/CirclePopupNavbar";
 @import "../src/components/gallery/gallery1/gallery1.scss";
 @import "../src/components/juegosDeOscarYOliver/colores/colores";
 @import "../src/components/juegosDeOscarYOliver/memo/memory-game";
 @import "./components/close/close_all_components";
-@import "../src//components//profileComponent/profile-comp";
-@import "../src/screens/profile/profile";
-@import "../src/components//profileComponent/profile-comp";
-@import "../src/components//profileComponent/modeButtons/dayNight-button";
-@import "../src/components//profileComponent/modeButtons/gamer-button";
-@import "../src/components//profileComponent/modeButtons/cartoon-button";
-@import "../src/components//profileComponent/projects/projectComponent";
-@import "../src/components//profileComponent/myPicture/myPicture";
+@import "../src/components/profileComponent/profile-comp";
+@import "../src/components/profileComponent/profile-comp";
+@import "../src/components/profileComponent/modeButtons/dayNight-button";
+@import "../src/components/profileComponent/modeButtons/gamer-button";
+@import "../src/components/profileComponent/modeButtons/cartoon-button";
+@import "../src/components/profileComponent/projects/projectComponent";
+@import "../src/components/profileComponent/myPicture/myPicture";
 @import "../src/components/buttons/buttons";
 @import "../src/components/images/images";
 @import "../src/components/buttons/button/button1";
@@ -27,6 +27,11 @@
 @import "../src/components/buttons/button/button3";
 
 
+
+
+
+@import "../src/screens/profile/profile";
+@import "../src/screens/navbars/navbarScreens";
 @import "../src/screens/menu/allComponents";
 @import "../src/screens/rickandmorty/rickandmorty";
 

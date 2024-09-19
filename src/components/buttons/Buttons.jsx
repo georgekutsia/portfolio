@@ -8,18 +8,18 @@ function Buttons({closeComponent}) {
     <div className='buttons-box'>
     <CloseAllComponent setComponent={closeComponent}/>
       <div className='buttons-box-div'>
-        <Button1 classBtn={"button0"}/>
-        <Button1 classBtn={"button4"}/>
-        <Button1 classBtn={"button2"}/>
-        <Button1 classBtn={"button1"}/>
-        <Button1 classBtn={"button3"}/>
+        <Button1 classBtn={"button0"} text={"hover"}/>
+        <Button1 classBtn={"button4"} text={"hover"}/>
+        <Button1 classBtn={"button2"} text={"hover"}/>
+        <Button1 classBtn={"button1"} text={"hover"}/>
+        <Button1 classBtn={"button3"} text={"hover"}/>
       </div>
       <div className='buttons-box-div'>
-        <Button2 classBtn={"button5"}/>
-        <Button2 classBtn={"button6"}/>
-        <Button2 classBtn={"button7"}/>
-        <Button2 classBtn={"button8"}/>
-        <Button2 classBtn={"button9"}/>
+        <Button2 classBtn={"button5"} text={"hover"}/>
+        <Button2 classBtn={"button6"} text={"hover"}/>
+        <Button2 classBtn={"button7"} text={"hover"}/>
+        <Button2 classBtn={"button8"} text={"hover"}/>
+        <Button2 classBtn={"button9"} text={"hover"}/>
       </div>
       <div className='buttons-box-div'>
         {/* <button3 classBtn={"button10"}/>

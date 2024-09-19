@@ -2,12 +2,12 @@ import React, { useContext, useEffect, useState } from 'react'
 import { CalculatorBody, CircularNavbar, Gallery1, Cart1, Colores, ColoresNombrados, Memory, Buttons, ImagesComp} from "../../components";
 import Methods from '../../components/methods/Methods';
 import List from '../../components/notes/note1/List';
-import { div } from 'three/examples/jsm/nodes/Nodes.js';
 import { GlobalContext } from '../../App';
+import NavbarScreen from '../navbars/NavbarScreen';
 
 function ComponentsScreens() {
-  const [showNavbars, setShowNavbars] = useState(true)
   const { darkLightText, language } = useContext(GlobalContext);
+  const [showNavbars, setShowNavbars] = useState(true)
   const [text, setText] = useState("Ocultar"); // Set initial text to Spanish
 
 const [calculator, setCalculator] = useState(false)
@@ -17,6 +17,7 @@ const [colores, setColores] = useState(false)
 const [list, setList] = useState(false)
 const [buttons, setButtons] = useState(false)
 const [images, setImages] = useState(false)
+const [navBars, setNavBars] = useState(false)
 
 const [coloresNombrados, setColoresNombrados] = useState(false)
 const [memory, setMemory] = useState(false)
@@ -87,6 +88,9 @@ const handleButtons = ()=>{
 const handleImages = ()=>{
   setImages(!images)
 }
+const handleNavbars = ()=>{
+      setNavBars(!navBars) 
+}
 
   return (
     <>
@@ -110,9 +114,9 @@ const handleImages = ()=>{
         />
         {/* 2 */}
         <CircularNavbar
-          text={"páginas"}
-          href1={"https://guide-dongions.netlify.app/"}
-          item1={"dice-d20"}
+          text={"Bloques"}
+          handle1={handleNavbars}
+          item1={"bars"}
           item2={"palette"}
           item3={"bomb"}
           item4={"calendar"}
@@ -126,15 +130,15 @@ const handleImages = ()=>{
         />
         {/* 3 */}
         <CircularNavbar 
-          text={"Peaces"}
-          handleGallery1={handleGallery1}
-          handleCalculator={handleCalculator}
-          handleMethods={handleMethods}
-          handleList1={handleList}
-          handleButtons1={handleButtons}
-          handleImages1={handleImages}
-          item1={"calculator"}
-          item2={"palette"}
+          text={"Piezas"}
+          handle1={handleGallery1}
+          handle2={handleCalculator}
+          handle3={handleMethods}
+          handle4={handleList}
+          handle5={handleButtons}
+          handle6={handleImages}
+          item1={"palette"}
+          item2={"calculator"}
           item3={"bezier-curve"}
           item4={"bomb"}
           item5={"toggle-on"}
@@ -223,6 +227,11 @@ const handleImages = ()=>{
       <div>
         {images && 
         <ImagesComp closeComponent={handleImages}/>
+        }
+      </div>
+      <div>
+        {navBars && 
+        <NavbarScreen closeComponent={handleNavbars}/>
         }
       </div>
     </>
