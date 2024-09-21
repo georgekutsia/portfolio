@@ -1,6 +1,6 @@
 import React from "react";
 
-function CirclePopupNavbarComponent() {
+function CirclePopupNavbar1Component() {
   return (
     <div className="circle-popbar">
       <nav className="nav-11">
@@ -41,4 +41,4 @@ function CirclePopupNavbarComponent() {
   );
 }
 
-export default CirclePopupNavbarComponent;
+export default CirclePopupNavbar1Component;

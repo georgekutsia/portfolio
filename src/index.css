@@ -8,11 +8,11 @@
   --my-red: #f20000;
   --my-blue: #0949a9;
   --my-blue: #0585da;
+  --my-violet:rgba(254, 19, 180, 0.994);
   --my-lightBlue: #48E8AA;
-  --my-lightLightBlue: #9cffd9;
-  --my-lightlightblue:rgba(146, 171, 253, 0.65);
-  --my-lightlightgreen:rgba(193, 244, 141, 0.699);
-  --my-lightlightyellow:rgba(255, 251, 0, 0.342);
+  --my-lightlightorange: #ffe09c;
+  --my-lightlightgreen:rgba(198, 253, 142, 0.699);
+  --my-lightlightyellow:rgba(255, 251, 0, 0.616);
   --my-lightlightviolet:rgba(250, 155, 220, 0.669);
 }
 
@@ -38,11 +38,11 @@ a {
   --my-red: #f20000;
   --my-blue: #0949a9;
   --my-blue: #0585da;
+  --my-violet:rgba(254, 19, 180, 0.994);
   --my-lightBlue: #48E8AA;
-  --my-lightLightBlue: #9cffd9;
-  --my-lightlightblue:rgba(146, 171, 253, 0.65);
-  --my-lightlightgreen:rgba(193, 244, 141, 0.699);
-  --my-lightlightyellow:rgba(255, 251, 0, 0.342);
+  --my-lightlightorange: #ffe09c;
+  --my-lightlightgreen:rgba(198, 253, 142, 0.699);
+  --my-lightlightyellow:rgba(255, 251, 0, 0.616);
   --my-lightlightviolet:rgba(250, 155, 220, 0.669);
 }
 
@@ -494,10 +494,14 @@ a {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 200px;
-  border-radius: 15px;
-  background-color: var(--my-grey);
+  width: 150px;
+  border-radius: 15px 15px 55px 55px;
+  background-color: rgba(255, 255, 255, 0.601);
   height: 40px;
+}
+
+.nav-11:hover label {
+  box-shadow: 1px 1px 1px black;
 }
 
 .nav-11 [type=checkbox] {
@@ -515,14 +519,13 @@ a {
   font-size: 16px;
   cursor: pointer;
   z-index: 1;
-  background: var(--my-lightLightBlue);
+  background: var(--my-lightBlue);
   border-radius: 50%;
   transform: translate(20%, -50%);
   transition: all 0.2s;
   overflow: hidden;
 }
 
-/* Primer cuarto del círculo (arriba a la izquierda) */
 .nav-11 [type=checkbox] + label::before {
   content: "";
   position: absolute;
@@ -530,12 +533,11 @@ a {
   height: 50%;
   top: 0;
   left: 0;
-  background-color: var(--my-lightlightblue);
+  background-color: var(--my-lightlightorange);
   border-top-left-radius: 100%;
   transition: all 0.2s;
 }
 
-/* Segundo cuarto del círculo (arriba a la derecha) */
 .nav-11 [type=checkbox] + label::after {
   content: "";
   position: absolute;
@@ -548,7 +550,6 @@ a {
   transition: all 0.2s;
 }
 
-/* Cuarto inferior izquierdo (marrón) */
 .nav-11 [type=checkbox] + label .bottom-left {
   position: absolute;
   width: 50%;
@@ -560,7 +561,6 @@ a {
   transition: all 0.2s;
 }
 
-/* Cuarto inferior derecho (var(--my-lightlightviolet)a) */
 .nav-11 [type=checkbox] + label .bottom-right {
   position: absolute;
   width: 50%;
@@ -576,7 +576,6 @@ a {
   background: var(--my-lightBlue);
 }
 
-/* Cambios cuando el checkbox está marcado */
 .nav-11 input:checked + label {
   background: var(--my-lightBlue);
   transform: translate(20%, -60%);
@@ -671,7 +670,7 @@ a {
 }
 
 .nav-11 input:checked ~ .circle-popbar-menu li:nth-child(2) a {
-  background-color: var(--my-lightlightblue);
+  background-color: var(--my-lightlightorange);
 }
 
 .nav-11 input:checked ~ .circle-popbar-menu li:nth-child(3) a {
@@ -687,6 +686,130 @@ a {
   z-index: 2;
   color: white;
   font-weight: 900;
+}
+
+.nav-12 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  max-width: 150px;
+  border-radius: 15px 15px 55px 55px;
+  background: var(--my-white);
+  box-shadow: rgba(50, 50, 93, 0.1) 0 30px 60px -12px, rgba(0, 0, 0, 0.15) 0 18px 36px -18px;
+  height: 40px;
+}
+
+.nav-12 [type=checkbox] {
+  position: absolute;
+  opacity: 0;
+}
+
+.nav-12 [type=checkbox] + label {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 1;
+  background: var(--my-violet);
+  border-radius: 50%;
+  transform: translateY(-50%);
+  transition: all 0.2s;
+  justify-self: center;
+  margin-left: 40px;
+}
+
+.nav-12 [type=checkbox] + label:hover {
+  background: var(--my-violet);
+}
+
+.nav-12:hover label {
+  box-shadow: 1px 1px 1px black;
+}
+
+.circle-popup-menu2 li {
+  position: absolute;
+  bottom: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.4s;
+}
+
+.circle-popup-menu2 li:nth-child(1) {
+  transition-delay: 0.2s;
+}
+
+.circle-popup-menu2 li:nth-child(2) {
+  transition-delay: 0.15s;
+}
+
+.circle-popup-menu2 li:nth-child(3) {
+  transition-delay: 0.1s;
+}
+
+.circle-popup-menu2 li:nth-child(4) {
+  transition-delay: 0.05s;
+}
+
+.circle-popup-menu2 li a {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--my-violet);
+  color: black;
+}
+
+.circle-popup-menu2 li a span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(calc(100% + 25px));
+  width: 100%;
+  font-size: 13px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: var(--my-white);
+  font-weight: bold;
+}
+
+.nav-12 input:checked + label {
+  background: var(--my-white);
+  transform: translateY(calc(-50% - 4px));
+}
+
+.nav-12 input:checked ~ .circle-popup-menu2 li:nth-child(1) {
+  bottom: -190px;
+  transition-delay: 0.1s;
+}
+
+.nav-12 input:checked ~ .circle-popup-menu2 li:nth-child(2) {
+  bottom: -135px;
+  left: calc(50% - 75px);
+  transition-delay: 0.2s;
+}
+
+.nav-12 input:checked ~ .circle-popup-menu2 li:nth-child(3) {
+  bottom: -135px;
+  left: calc(50% + 75px);
+  transition-delay: 0.3s;
+}
+
+.nav-12 input:checked ~ .circle-popup-menu2 li:nth-child(4) {
+  bottom: -90px;
+  transition-delay: 0.4s;
+}
+
+.nav-12 input:checked ~ .circle-popup-menu2 li a span {
+  opacity: 1;
+  transition-delay: 0.9s;
 }
 
 .gallery1 {

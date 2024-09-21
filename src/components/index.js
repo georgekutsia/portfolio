@@ -28,7 +28,8 @@ export { default as ProjectComponent } from "./profileComponent/projects/Project
 export { default as ListComments } from "./notes/note1/ListComments";
 export { default as List } from "./notes/note1/List";
 export { default as CircularNavbarLi } from "./navbars/circular-navbar/CircularNavbarLi";
-export { default as CirclePopupNavbarComponent } from "./navbars/circle-popup/CirclePopupNavbarComponent.jsx";
+export { default as CirclePopupNavbar1Component } from "./navbars/circle-popup/CirclePopupNavbar1Component.jsx";
+export { default as CirclePopupNavbar2Component } from "./navbars/circle-popup/CirclePopupNavbar2Component.jsx";
 export { default as Gallery1 } from "./gallery/gallery1/Gallery1";
 export { default as Cart1 } from "./cart1/Cart1";
 export { default as Note1 } from "./notes/note1/Note1";

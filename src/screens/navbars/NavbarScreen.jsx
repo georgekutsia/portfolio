@@ -1,11 +1,12 @@
 import React from 'react'
-import { CirclePopupNavbarComponent, CloseAllComponent } from '../../components'
+import { CirclePopupNavbar1Component, CirclePopupNavbar2Component, CloseAllComponent } from '../../components'
 
 function NavbarScreen({closeComponent}) {
   return (
-    <div className='navbar-screen'>
+    <div className='navbar-screen d-flex pt-5'>
         <CloseAllComponent setComponent={closeComponent}/>
-        <CirclePopupNavbarComponent/>
+        <CirclePopupNavbar1Component/>
+        <CirclePopupNavbar2Component/>
     </div>
   )
 }
